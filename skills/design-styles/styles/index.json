@@ -1,0 +1,1702 @@
+{
+  "agentic": {
+    "name": "Agentic",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Conversational AI-first interface with minimal controls, clear outcomes, and delegated task flows for agentic workflows.",
+    "visual": "modern, bold",
+    "fonts": {
+      "primary": "Playfair Display",
+      "display": "Playfair Display",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#FF5701",
+      "secondary": "#F6F6F1",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "produtos de IA/chat em que o usuário delega tarefas.",
+    "avoid": "apps tradicionais densos em dados."
+  },
+  "ant": {
+    "name": "Ant",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Structured, enterprise-focused design system emphasizing clarity, consistency, and efficiency for data-dense web applications.",
+    "visual": "data-dense, enterprise",
+    "fonts": {
+      "primary": "Plus Jakarta Sans",
+      "display": "Plus Jakarta Sans",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#1677ff",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "ERPs, admins, tabelas e back-offices.",
+    "avoid": "landing pages ou marcas expressivas."
+  },
+  "artistic": {
+    "name": "Artistic",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "High-contrast, expressive style with creative typography and bold color choices for visually striking interfaces.",
+    "visual": "high-contrast, artistic",
+    "fonts": {
+      "primary": "Limelight",
+      "display": "Limelight",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "portfólios, campanhas e cultura.",
+    "avoid": "finanças, saúde ou contextos sóbrios."
+  },
+  "basic": {
+    "name": "Basic",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Print-inspired visual language for books, magazines, and reports with editorial grids and expressive typography.",
+    "visual": "modern, editorial",
+    "fonts": {
+      "primary": "Nunito",
+      "display": "Oswald",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#A855F7",
+      "secondary": "#0A1829",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#0A1829"
+    },
+    "customRules": true,
+    "use": "documentos longos, relatórios e blogs.",
+    "avoid": "apps interativos densos."
+  },
+  "bento": {
+    "name": "Bento",
+    "family": "premium-dark",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Modular grid layout with card-like blocks, clear hierarchy, soft spacing, and subtle visual contrast for organized, scannable interfaces.",
+    "visual": "modern, clean",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#FAD4C0",
+      "secondary": "#80A1C1",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFF5E6",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "páginas de produto, features e dashboards leves.",
+    "avoid": "narrativas longas contínuas."
+  },
+  "bold": {
+    "name": "Bold",
+    "family": "brutalist-bold",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Strong visual presence with heavyweight typography, high-contrast colors, and commanding layouts.",
+    "visual": "bold",
+    "fonts": {
+      "primary": "Archivo Black",
+      "display": "Archivo Black",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#0077BC",
+      "secondary": "#009866",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#111111",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "marcas que precisam de impacto imediato.",
+    "avoid": "leitura prolongada ou dados densos."
+  },
+  "brutalism": {
+    "name": "Brutalism",
+    "family": "brutalist-bold",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Raw, anti-design aesthetic inspired by concrete architecture with unadorned elements, jarring layouts, and functional minimalism.",
+    "visual": "bold",
+    "fonts": {
+      "primary": "Darker Grotesque",
+      "display": "Darker Grotesque",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#DD614C",
+      "secondary": "#DAA144",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "projetos de vanguarda e cultura.",
+    "avoid": "e-commerce ou produtos convencionais."
+  },
+  "cafe": {
+    "name": "Cafe",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Cozy cafe-inspired interface with warm tones, soft typography, and clean layouts for a relaxed browsing experience.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Poppins",
+      "display": "Poppins",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#5D4432",
+      "secondary": "#E9E3DD",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#F9F7F5",
+      "text": "#3E2B1E"
+    },
+    "customRules": false,
+    "use": "cafeterias, confeitarias e marcas acolhedoras.",
+    "avoid": "fintechs ou tech sério."
+  },
+  "claude": {
+    "name": "Claude",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A research-journal aesthetic printed on warm stone — authoritative, editorial, almost achromatic. Pages live on warm ivory parchment (never pure white), with near-black slate as the dominant ink.",
+    "visual": "modern, minimal, clean",
+    "fonts": {
+      "primary": "Anthropic Sans",
+      "display": "Anthropic Sans",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#141413",
+      "secondary": "#FAF9F6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos de leitura, reflexão e IA editorial.",
+    "avoid": "energia pop ou varejo vibrante."
+  },
+  "claymorphism": {
+    "name": "Claymorphism",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Soft, rounded 3D-like shapes mimicking malleable clay with playful, puffy elements and colorful surfaces.",
+    "visual": "modern, high-contrast, playful",
+    "fonts": {
+      "primary": "Montserrat",
+      "display": "Poppins",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#FFFFFF",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#1C398E"
+    },
+    "customRules": true,
+    "use": "apps consumer lúdicos.",
+    "avoid": "contextos corporativos."
+  },
+  "clean": {
+    "name": "Clean",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Simplicity-focused design with ample whitespace, legible typography, and a limited color palette to reduce visual clutter.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Roboto",
+      "display": "Poppins",
+      "mono": "Inconsolata"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "SaaS, documentação e produtos que precisam de clareza.",
+    "avoid": "marcas que pedem energia."
+  },
+  "codex": {
+    "name": "Open",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A radically minimal, blank-canvas interface built as a pure edge-to-edge surface, with almost no color and typography carrying the visual weight. Black serves as the only filled color, the only divider, and the sole surface tone cards.",
+    "visual": "modern, minimal, clean",
+    "fonts": {
+      "primary": "Open Sans",
+      "display": "Open Sans",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#000000",
+      "secondary": "#ffffff",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "ferramentas de escrita e código.",
+    "avoid": "vitrines ricas ou marketing."
+  },
+  "colorful": {
+    "name": "Colorful",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Vibrant, high-contrast palettes and gradients for engaging, memorable, and modern user experiences.",
+    "visual": "high-contrast, playful, premium",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "consumer apps e campanhas.",
+    "avoid": "dashboards sérios ou luxo discreto."
+  },
+  "contemporary": {
+    "name": "Contemporary",
+    "family": "premium-dark",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Current-era minimalist design with bento grids, dark mode support, and high-performance accessible layouts.",
+    "visual": "modern, minimal, bold, playful",
+    "fonts": {
+      "primary": "Jost",
+      "display": "Jost",
+      "mono": "Overpass Mono"
+    },
+    "tokens": {
+      "primary": "#C800DF",
+      "secondary": "#E60076",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos tech atuais.",
+    "avoid": "identidades editoriais clássicas."
+  },
+  "corporate": {
+    "name": "Corporate",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Professional, brand-aligned design with structured grids, minimalist layouts, and consistent enterprise patterns.",
+    "visual": "enterprise, premium",
+    "fonts": {
+      "primary": "Open Sans",
+      "display": "Poppins",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "sites institucionais e B2B.",
+    "avoid": "projetos lúdicos."
+  },
+  "cosmic": {
+    "name": "Cosmic",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Futuristic sci-fi aesthetic with dark themes, vibrant neon accents, and immersive spatial elements.",
+    "visual": "playful, premium",
+    "fonts": {
+      "primary": "Audiowide",
+      "display": "Audiowide",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "tech, IA e gaming.",
+    "avoid": "marcas humanas e acolhedoras."
+  },
+  "creative": {
+    "name": "Creative",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Playful, character-driven design with expressive typography and bold graphics for landing pages and creative projects.",
+    "visual": "playful",
+    "fonts": {
+      "primary": "Bangers",
+      "display": "Bangers",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "landing pages e projetos criativos.",
+    "avoid": "ferramentas de produtividade."
+  },
+  "dithered": {
+    "name": "Dithered",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Dot-pattern rendering technique that simulates shades with a limited palette for nostalgic, retro, high-contrast visuals.",
+    "visual": "modern, minimal",
+    "fonts": {
+      "primary": "Open Sans",
+      "display": "Space Grotesk",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "projetos com vibe retrô/analógico-digital.",
+    "avoid": "interfaces premium clean."
+  },
+  "doodle": {
+    "name": "Doodle",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Hand-drawn, sketch-like style with doodles, handwritten fonts, and imperfect lines for a playful, informal feel.",
+    "visual": "playful",
+    "fonts": {
+      "primary": "Delius Swash Caps",
+      "display": "Delius Swash Caps",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#49B6E5",
+      "secondary": "#263D5B",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "marcas informais e divertidas.",
+    "avoid": "contextos formais."
+  },
+  "dramatic": {
+    "name": "Dramatic",
+    "family": "narrative-conversion",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "High-contrast, theatrical design with bold layouts, immersive visuals, and unconventional compositions that command attention.",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Outfit",
+      "display": "Outfit",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#8B5CF6",
+      "secondary": "#F43F5E",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#09090B",
+      "text": "#FAFAFA"
+    },
+    "customRules": false,
+    "use": "eventos, filmes e campanhas.",
+    "avoid": "apps de trabalho."
+  },
+  "editorial": {
+    "name": "Editorial",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Magazine-inspired editorial layout with refined serif typography, structured grids, and elegant reading experiences.",
+    "visual": "modern, editorial",
+    "fonts": {
+      "primary": "Gelasio",
+      "display": "Gelasio",
+      "mono": "Ubuntu Mono"
+    },
+    "tokens": {
+      "primary": "#111111",
+      "secondary": "#f1f1f1",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "revistas, blogs e portfólios.",
+    "avoid": "dashboards."
+  },
+  "enterprise": {
+    "name": "Enterprise",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Dark-themed cloud-platform aesthetic with modular grids, glass-like panels, and strong data hierarchy for productivity dashboards.",
+    "visual": "modern, clean, cloud-platform aesthetic (Heroku/Vercel/GitHub inspired), dark theme, subtle gradients, soft shadows, glass-like panels, rounded components",
+    "fonts": {
+      "primary": "IBM Plex Sans",
+      "display": "IBM Plex Sans",
+      "mono": "IBM Plex Sans"
+    },
+    "tokens": {
+      "primary": "#0C5CAB",
+      "secondary": "#0a4a8a",
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "danger": "#ef4444",
+      "surface": "#09090b",
+      "text": "#fafafa"
+    },
+    "customRules": true,
+    "use": "dashboards de produtividade.",
+    "avoid": "sites de marketing."
+  },
+  "expressive": {
+    "name": "Expressive",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Vibrant, personality-driven design with bold colors, playful graphics, and dynamic layouts that balance creativity with structure.",
+    "visual": "modern, playful",
+    "fonts": {
+      "primary": "IBM Plex Mono",
+      "display": "IBM Plex Mono",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#db2777",
+      "secondary": "#2563eb",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "marcas expressivas.",
+    "avoid": "ferramentas sóbrias."
+  },
+  "fantasy": {
+    "name": "Fantasy",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Game-inspired fantasy aesthetic with bold, premium visuals, rich color palettes, and immersive thematic elements.",
+    "visual": "bold, premium",
+    "fonts": {
+      "primary": "New Rocker",
+      "display": "New Rocker",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#0250CC",
+      "secondary": "#FDC800",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "games, RPG e entretenimento.",
+    "avoid": "B2B."
+  },
+  "fiction": {
+    "name": "Fiction",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A playful, energetic, cartoonesque interface inspired by friendly children's-book illustrations — warm cream backgrounds, big bold custom display typography, saturated brand color blocks, thick black outlines, generously rounded shapes",
+    "visual": "playful",
+    "fonts": {
+      "primary": "Cossette Texte",
+      "display": "Cossette Texte",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#222222",
+      "secondary": "#FFE9CE",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos infantis e lúdicos.",
+    "avoid": "fintechs ou corporativo."
+  },
+  "flat": {
+    "name": "Flat",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Two-dimensional minimalist style with vibrant colors, clean typography, and no 3D effects for fast, user-friendly interfaces.",
+    "visual": "minimal, enterprise",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#F2673C",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "apps de massa que priorizam performance.",
+    "avoid": "quando profundidade/realismo importa."
+  },
+  "friendly": {
+    "name": "Friendly",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Approachable, intuitive design with rounded elements, ample whitespace, and soft pastel color palettes.",
+    "visual": "bold, playful, premium",
+    "fonts": {
+      "primary": "Noto Serif Display",
+      "display": "Noto Serif Display",
+      "mono": "Space Mono"
+    },
+    "tokens": {
+      "primary": "#F2D9DC",
+      "secondary": "#D9F2D8",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "apps de consumidor e educação.",
+    "avoid": "contextos técnicos densos."
+  },
+  "futuristic": {
+    "name": "Futuristic",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Forward-looking design with tech-inspired typography, modern layouts, and a sleek, innovation-driven aesthetic.",
+    "visual": "modern",
+    "fonts": {
+      "primary": "Roboto",
+      "display": "Audiowide",
+      "mono": "Anonymous Pro"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos de inovação.",
+    "avoid": "marcas tradicionais."
+  },
+  "geometric": {
+    "name": "Geometric",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Geometric, structured design with clean typography, neutral colors, precise shapes, and intuitive layouts that stay out of the way.",
+    "visual": "geometric, structured, clean",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "ferramentas profissionais que não devem chamar atenção.",
+    "avoid": "marcas expressivas."
+  },
+  "glassmorphism": {
+    "name": "Glassmorphism",
+    "family": "premium-dark",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Frosted glass effect with translucent layers, subtle blur, and luminous borders for depth and modern elegance.",
+    "visual": "clean, high-contrast, bold, enterprise, liquidglass effect, glassmorphism",
+    "fonts": {
+      "primary": "Plus Jakarta Sans",
+      "display": "Plus Jakarta Sans",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#1856FF",
+      "secondary": "#3A344E",
+      "success": "#07CA6B",
+      "warning": "#E89558",
+      "danger": "#EA2143",
+      "surface": "#FFFFFF",
+      "text": "#141414"
+    },
+    "customRules": true,
+    "use": "interfaces modernas com profundidade.",
+    "avoid": "densidade extrema de dados (legibilidade)."
+  },
+  "gradient": {
+    "name": "Gradient",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Smooth color transitions and gradient-rich surfaces for modern, playful interfaces with visual depth.",
+    "visual": "modern, playful",
+    "fonts": {
+      "primary": "Montserrat",
+      "display": "Space Grotesk",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#990FFA",
+      "secondary": "#E60076",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "landing pages vibrantes.",
+    "avoid": "editorial monocromático."
+  },
+  "high-end-visual-design": {
+    "name": "high-end-visual-design",
+    "family": "premium-dark",
+    "origin": "taste-skill-classics",
+    "invocation": "opt-in",
+    "description": "Look calmo e polido de agência high-end: contraste suave, whitespace generoso, motion por springs, micro-interações hápticas (double-bezel), com arquétipos de vibe e layout sorteados por projeto (Ethereal Glass, Editorial Luxury, Soft Structuralism; bento assimétrico, cascata Z, split editorial).",
+    "use": "somente quando chamada pelo nome, para experiências premium nível Awwwards sem agressividade.",
+    "avoid": "em densidade extrema de dados ou marcas rústicas/energéticas."
+  },
+  "immersive": {
+    "name": "Immersive",
+    "family": "narrative-conversion",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "An immersive, interactive, exhibit-style interface that blends storytelling, animation, and gamified elements to create a playful, experience-driven journey. The entire app sits on a single continuous brand-colored canvas (deep green)",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Oswald, sans-serif",
+      "display": "Oswald, sans-serif",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#00592B",
+      "secondary": "#0023D1",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "experiências e exibições interativas.",
+    "avoid": "produtividade."
+  },
+  "impeccable": {
+    "name": "Impeccable",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A modern, graphic, editorial-poster aesthetic — warm and confident — built on alternating cream and burnt orange sections, an amber brand color.",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Chakra Petch",
+      "display": "Chakra Petch",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#CC8800",
+      "secondary": "#C55221",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "portfólios e marcas de estúdio.",
+    "avoid": "dashboards ou dados densos."
+  },
+  "industrial-brutalist-ui": {
+    "name": "industrial-brutalist-ui",
+    "family": "tech-futurist",
+    "origin": "taste-skill-classics",
+    "invocation": "opt-in",
+    "description": "Look mecânico duro: tipografia suíça, grids rígidos, contraste extremo de escala e cor utilitária. Dois arquétipos — Swiss Industrial Print (claro, impresso) OU Tactical Telemetry/CRT (escuro, terminal militar) — escolher UM e não misturar no mesmo projeto.",
+    "use": "somente quando chamada pelo nome, para looks industriais, técnicos ou militares.",
+    "avoid": "em produtos consumer amigáveis; não alternar os dois arquétipos no mesmo projeto."
+  },
+  "levels": {
+    "name": "Levels",
+    "family": "narrative-conversion",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Conversion-focused design that removes friction and guides users toward action through clarity, trust, and speed.",
+    "visual": "modern, clean",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#27272A",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "landing pages e funis de conversão.",
+    "avoid": "apps internos."
+  },
+  "lingo": {
+    "name": "Lingo",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Playful, minimal design with bright colors, rounded shapes, tactile 3D borders, and friendly illustrations for approachable interfaces.",
+    "visual": "bold, playful",
+    "fonts": {
+      "primary": "Nunito",
+      "display": "Nunito",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#58cc02",
+      "secondary": "#ce82ff",
+      "success": "#58cc02",
+      "warning": "#ffc800",
+      "danger": "#ff4b4b",
+      "surface": "#FFFFFF",
+      "text": "#3c3c3c"
+    },
+    "customRules": true,
+    "use": "produtos approacháveis (estilo Duolingo).",
+    "avoid": "corporativo sério."
+  },
+  "material": {
+    "name": "Material",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Google's Material Design with layered surfaces, dynamic theming, built-in motion, and responsive cross-platform patterns.",
+    "visual": "modern, minimal, clean",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Roboto",
+      "mono": "Fira Code"
+    },
+    "tokens": {
+      "primary": "#6442D6",
+      "secondary": "#C8B3FD",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "apps do ecossistema Google/Android.",
+    "avoid": "identidades autorais fortes."
+  },
+  "matrix": {
+    "name": "Matrix",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A cyber-slick, dark-only Matrix-inspired interface defined by minimalist fashion, high-tech digital elements",
+    "visual": "high-contrast",
+    "fonts": {
+      "primary": "Space Mono",
+      "display": "Space Mono",
+      "mono": "Space Mono"
+    },
+    "tokens": {
+      "primary": "#2DB58A",
+      "secondary": "#0B0C14",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "tech e projetos temáticos do filme.",
+    "avoid": "clareza corporativa."
+  },
+  "minimal": {
+    "name": "Minimal Design",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Stripped-back design emphasizing whitespace, clean typography, and restrained color for maximum clarity and focus.",
+    "visual": "minimal, clean, bold",
+    "fonts": {
+      "primary": "Open Sans",
+      "display": "Inter",
+      "mono": "Inconsolata"
+    },
+    "tokens": {
+      "primary": "#0C0C09",
+      "secondary": "#312C85",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#F4F4F1",
+      "text": "#0C0C09"
+    },
+    "customRules": false,
+    "use": "portfólios e produtos minimalistas.",
+    "avoid": "quem quer vitrine rica."
+  },
+  "minimalist-ui": {
+    "name": "minimalist-ui",
+    "family": "minimal-clean",
+    "origin": "taste-skill-classics",
+    "invocation": "opt-in",
+    "description": "UI editorial de produto \"documento\": monocromia quente, contraste tipográfico extremo (serifa editorial + sans + mono), grids bento ultra-flat, pastéis dessaturados pontuais. Proíbe Inter/Roboto, ícones genéricos de traço grosso, sombras duras, gradientes, pills grandes e emojis.",
+    "use": "somente quando chamada pelo nome, para look de workspace premium utilitário.",
+    "avoid": "em marcas coloridas, lúdicas ou com fotografia rica."
+  },
+  "modern": {
+    "name": "Modern",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Contemporary editorial style with serif typography, minimal palettes, and clean layouts for polished digital products.",
+    "visual": "modern, minimal, clean, editorial",
+    "fonts": {
+      "primary": "IBM Plex Serif",
+      "display": "IBM Plex Serif",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#553F83",
+      "secondary": "#111111",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#553F83",
+      "text": "#ffffff"
+    },
+    "customRules": false,
+    "use": "produtos digitais polidos.",
+    "avoid": "estéticas retrô."
+  },
+  "mono": {
+    "name": "Mono design",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Monospace-driven, matrix-inspired design with high-contrast elements, compact density, and a hacker-chic aesthetic.",
+    "visual": "minimal, clean, high-contrast, playful, matrix",
+    "fonts": {
+      "primary": "Space Mono",
+      "display": "Space Mono",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#37F712",
+      "secondary": "#00A6F4",
+      "success": "#00A63D",
+      "warning": "#FE9900",
+      "danger": "#FF2157",
+      "surface": "#E7E5E4",
+      "text": "#78716B"
+    },
+    "customRules": true,
+    "use": "dev tools e terminais.",
+    "avoid": "consumer comum."
+  },
+  "neobrutalism": {
+    "name": "Neobrutalism",
+    "family": "brutalist-bold",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Modern take on brutalism with bold borders, vivid accent colors, and raw, high-contrast layouts on warm surfaces.",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#FDC800",
+      "secondary": "#432DD7",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FBFBF9",
+      "text": "#1C293C"
+    },
+    "customRules": false,
+    "use": "marcas ousadas atuais.",
+    "avoid": "contextos conservadores."
+  },
+  "neon": {
+    "name": "Neon",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Electric neon glow effects with high-contrast color pairings for bold, attention-grabbing interfaces.",
+    "visual": "high-contrast",
+    "fonts": {
+      "primary": "Roboto",
+      "display": "STIX Two Text",
+      "mono": "Source Code Pro"
+    },
+    "tokens": {
+      "primary": "#BBF351",
+      "secondary": "#00BCFF",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "gaming, música e nightlife.",
+    "avoid": "leitura longa."
+  },
+  "neumorphism": {
+    "name": "Neumorphism club",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Soft, extruded UI elements with inner and outer shadows on monochromatic surfaces for a tactile, embedded look.",
+    "visual": "minimal, clean, high-contrast, playful, matrix",
+    "fonts": {
+      "primary": "Space Mono",
+      "display": "Space Mono",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#006666",
+      "secondary": "#F1F2F5",
+      "success": "#00A63D",
+      "warning": "#FE9900",
+      "danger": "#FF2157",
+      "surface": "#E7E5E4",
+      "text": "#1E2938"
+    },
+    "customRules": true,
+    "use": "players e controles táteis.",
+    "avoid": "requisitos rígidos de acessibilidade/contraste."
+  },
+  "pacman": {
+    "name": "Pacman",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Retro arcade-inspired design with pixel fonts, dotted borders, playful high-contrast colors, and 8-bit game aesthetics.",
+    "visual": "high-contrast, playful, dotted borders",
+    "fonts": {
+      "primary": "Press Start 2P",
+      "display": "Press Start 2P",
+      "mono": "Space Mono"
+    },
+    "tokens": {
+      "primary": "#2A3FE5",
+      "secondary": "#F4B9B0",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#000000",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "games e diversão nostálgica.",
+    "avoid": "produtos sérios."
+  },
+  "paper": {
+    "name": "Paper Design",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Paper-textured, print-inspired design with minimal colors, clean serif/sans typography, and tactile surface qualities.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Roboto",
+      "display": "Montserrat",
+      "mono": "PT Mono"
+    },
+    "tokens": {
+      "primary": "#111111",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "notas, journals e leitura tátil.",
+    "avoid": "dashboards."
+  },
+  "perspective": {
+    "name": "Perspective Design",
+    "family": "tech-futurist",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Spatial depth design with isometric views, vanishing points, and layered elements that guide attention through 3D-like realism.",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Poppins",
+      "display": "Oswald",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#00BD7D",
+      "secondary": "#00BD7D",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos técnicos e infográficos.",
+    "avoid": "leitura simples."
+  },
+  "power": {
+    "name": "Power",
+    "family": "premium-dark",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "High-end dark aesthetic with bold headings, monochromatic palette, and premium feel for premium brand experiences.",
+    "visual": "modern, bold, big headings",
+    "fonts": {
+      "primary": "Oswald",
+      "display": "Oswald",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#FAFAFA",
+      "secondary": "#FAFAFA",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#000000",
+      "text": "#ffffff"
+    },
+    "customRules": false,
+    "use": "experiências de marca premium.",
+    "avoid": "apps leves e amigáveis."
+  },
+  "premium": {
+    "name": "Premium",
+    "family": "premium-dark",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Apple-inspired premium aesthetic with precise spacing, modern typography, and a refined, polished visual language.",
+    "visual": "modern",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos de alto padrão.",
+    "avoid": "marcas rústicas."
+  },
+  "professional": {
+    "name": "Professional",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Polished, business-ready design with modern typography, structured layouts, and a trustworthy visual identity.",
+    "visual": "modern",
+    "fonts": {
+      "primary": "Poppins",
+      "display": "Poppins",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#FECE14",
+      "secondary": "#000000",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "consultorias e serviços.",
+    "avoid": "projetos lúdicos."
+  },
+  "pulse": {
+    "name": "Pulse",
+    "family": "brutalist-bold",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Dynamic, vibrant style with thick borders, geometric shapes, high-contrast colors, and expressive typography conveying motion and vitality.",
+    "visual": "bold, geometric, vibrant, thick-bordered",
+    "fonts": {
+      "primary": "Limelight",
+      "display": "Limelight",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#EA580B",
+      "secondary": "#F59E0B",
+      "background": "#FFEDD5",
+      "surface": "#FDBA74",
+      "text": "#EA580C"
+    },
+    "customRules": true,
+    "use": "esporte, música e energia jovem.",
+    "avoid": "calma/serenidade."
+  },
+  "refined": {
+    "name": "Refined",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Carefully curated, modern minimal style with elegant serif typography and understated, sophisticated palettes.",
+    "visual": "modern, minimal",
+    "fonts": {
+      "primary": "Playfair Display",
+      "display": "Playfair Display",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "luxo discreto e moda.",
+    "avoid": "vibes caóticas."
+  },
+  "retro": {
+    "name": "Retro",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Throwback design with vintage-inspired typography, high-contrast retro palettes, and nostalgic visual elements.",
+    "visual": "high-contrast, retro",
+    "fonts": {
+      "primary": "Macondo",
+      "display": "Macondo",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "marcas nostálgicas.",
+    "avoid": "tech de ponta."
+  },
+  "riso": {
+    "name": "Riso",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A playful, joyful, two-color risograph print aesthetic built on a single warm off-white paper surface running through every section",
+    "visual": "clean, high-contrast",
+    "fonts": {
+      "primary": "Space Grotesk",
+      "display": "Space Grotesk",
+      "mono": "Overpass Mono"
+    },
+    "tokens": {
+      "primary": "#F237A1",
+      "secondary": "#2C40A7",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "cultura, zines e arte.",
+    "avoid": "produtos sérios."
+  },
+  "roku": {
+    "name": "Roku",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "App dashboard with purple-themed aesthetic, top-bar navigation, card-based layouts, and developer-first workflows.",
+    "visual": "modern, clean, high-contrast, glass-like panels, soft shadows, rounded components",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#9333ea",
+      "secondary": "#a855f7",
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "danger": "#ef4444",
+      "surface": "#FFFFFF",
+      "text": "#09090b"
+    },
+    "customRules": false,
+    "use": "painéis de desenvolvedor.",
+    "avoid": "sites de marketing."
+  },
+  "sega": {
+    "name": "Sega",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A playful, arcade-inspired interface for games — built on the VT323 pixel typeface, hard-edged 0px corners, chunky pill buttons that physically press into solid offset blocks",
+    "visual": "modern, playful",
+    "fonts": {
+      "primary": "VT323",
+      "display": "VT323",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#4502FF",
+      "secondary": "#FFDA14",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "jogos retrô.",
+    "avoid": "apps de trabalho."
+  },
+  "shadcn": {
+    "name": "Shadcn",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Shadcn/ui-inspired design with minimal, clean components, monochrome palette, and utility-first patterns.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Geist",
+      "display": "Geist",
+      "mono": "Fira Code"
+    },
+    "tokens": {
+      "primary": "#000000",
+      "secondary": "#111111",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "SaaS modernos com Tailwind.",
+    "avoid": "identidades ilustradas."
+  },
+  "sketch": {
+    "name": "Sketch",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A friendly, hand-drawn sketch interface inspired by pencil illustrations on warm cream paper. Soft teal brand accents, hand-written display headings, rounded pill controls.",
+    "visual": "modern, clean, high-contrast",
+    "fonts": {
+      "primary": "Delicious Handrawn",
+      "display": "Delicious Handrawn",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#1DAD97",
+      "secondary": "#F4EDE0",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos amigáveis em fase de ideação.",
+    "avoid": "corporativo."
+  },
+  "skeumorphism": {
+    "name": "Skeumorphism",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Real-world mimicry with textured surfaces, 3D effects, and familiar physical metaphors for intuitive digital interfaces.",
+    "visual": "playful",
+    "fonts": {
+      "primary": "Roboto",
+      "display": "Germania One",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#FA3C00",
+      "secondary": "#F08321",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "apps para leigos e nostalgia pré-2013.",
+    "avoid": "estéticas flat modernas."
+  },
+  "sleek": {
+    "name": "Sleek",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Modern minimalist aesthetic with clean lines, intentional color palette, subtle interactions, and consistent spacing.",
+    "visual": "modern, minimal, clean",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "produtos tech elegantes.",
+    "avoid": "estéticas decorativas."
+  },
+  "spacious": {
+    "name": "Spacious",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Generous whitespace, consistent padding, and grid-based layouts for clean, readable, and breathing interfaces.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Open Sans",
+      "display": "Montserrat",
+      "mono": "IBM Plex Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "conteúdo premium e onboarding.",
+    "avoid": "densidade de dados."
+  },
+  "square": {
+    "name": "Square",
+    "family": "minimal-clean",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Graceful, refined aesthetic with delicate typography, minimal palettes, and polished layouts that exude sophistication.",
+    "visual": "minimal, clean",
+    "fonts": {
+      "primary": "Google Sans",
+      "display": "Google Sans",
+      "mono": "Anonymous Pro"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "marcas sofisticadas discretas.",
+    "avoid": "energia jovem."
+  },
+  "stitch": {
+    "name": "Stitch",
+    "family": "corporate-data",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Clean, high-contrast enterprise design for data-driven workflows with intuitive drag-and-drop patterns and structured layouts.",
+    "visual": "clean, high-contrast, enterprise",
+    "fonts": {
+      "primary": "Ubuntu",
+      "display": "Oswald",
+      "mono": "Ubuntu Mono"
+    },
+    "tokens": {
+      "primary": "#072C2C",
+      "secondary": "#FF5F03",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#EDEADE",
+      "text": "#111827"
+    },
+    "customRules": true,
+    "use": "ferramentas de trabalho com dados.",
+    "avoid": "marketing."
+  },
+  "storytelling": {
+    "name": "Storytelling",
+    "family": "narrative-conversion",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Narrative-driven design using visuals, copy, and interaction to guide users through engaging, emotionally resonant journeys.",
+    "visual": "playful",
+    "fonts": {
+      "primary": "Inter",
+      "display": "Abril Fatface",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#3B82F6",
+      "secondary": "#8B5CF6",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "páginas de história e campanhas.",
+    "avoid": "ferramentas utilitárias."
+  },
+  "terracotta": {
+    "name": "Terracotta",
+    "family": "editorial-warm",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "A sun-baked, clay-toned editorial interface built on warm cream surfaces, ink-brown headlines set in a display serif, and a single terracotta accent.",
+    "visual": "modern, clean, high-contrast, playful",
+    "fonts": {
+      "primary": "DM Serif Display",
+      "display": "DM Serif Display",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#C56A3C",
+      "secondary": "#F3E9D8",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#111827"
+    },
+    "customRules": false,
+    "use": "artesanato, gastronomia e marcas terrosas.",
+    "avoid": "tech frio."
+  },
+  "tetris": {
+    "name": "Tetris",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Classic block-game inspired design with playful colors, bold display fonts, and compact, high-energy layouts.",
+    "visual": "high-contrast, playful, premium",
+    "fonts": {
+      "primary": "Bangers",
+      "display": "Bangers",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#1C202B",
+      "secondary": "#7107E7",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#DFE7FF",
+      "text": "#1C398E"
+    },
+    "customRules": false,
+    "use": "games e diversão.",
+    "avoid": "contextos formais."
+  },
+  "vibrant": {
+    "name": "Vibrant",
+    "family": "playful-friendly",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "Lively, colorful design with bold playful typography, warm accents, and dynamic visual energy.",
+    "visual": "modern, clean, bold, playful",
+    "fonts": {
+      "primary": "Noto Sans",
+      "display": "Fascinate",
+      "mono": "Fira Code"
+    },
+    "tokens": {
+      "primary": "#7C61D4",
+      "secondary": "#EAAE87",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#FFFFFF",
+      "text": "#2F281D"
+    },
+    "customRules": false,
+    "use": "marcas jovens.",
+    "avoid": "sobriedade."
+  },
+  "vintage": {
+    "name": "Vintage",
+    "family": "retro-game",
+    "origin": "bergside",
+    "invocation": "auto",
+    "description": "1950s-1990s nostalgia with skeuomorphic touches, grainy textures, retro color palettes, and pixel-style typography.",
+    "visual": "clean, vintage, retro",
+    "fonts": {
+      "primary": "Silkscreen",
+      "display": "Silkscreen",
+      "mono": "JetBrains Mono"
+    },
+    "tokens": {
+      "primary": "#008080",
+      "secondary": "#C0C0C0",
+      "success": "#16A34A",
+      "warning": "#D97706",
+      "danger": "#DC2626",
+      "surface": "#C0C0C0",
+      "text": "#000000"
+    },
+    "customRules": false,
+    "use": "marcas retrô autênticas.",
+    "avoid": "minimalismo moderno."
+  }
+}

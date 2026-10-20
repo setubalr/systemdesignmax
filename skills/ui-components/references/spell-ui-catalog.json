@@ -1,0 +1,481 @@
+{
+  "registry": "@spell",
+  "url": "https://spell.sh/r/{name}.json",
+  "license": "MIT",
+  "licenseSource": "https://github.com/xxtomm/spell-ui/blob/main/LICENSE",
+  "pricing": "Todos os itens do registry.json público são registry:component sob MIT; nenhum marcado como pro/pago.",
+  "checkedAt": "2026-10-20",
+  "count": 33,
+  "items": [
+    {
+      "name": "chart",
+      "title": "Chart",
+      "category": "display",
+      "description": "Interactive line chart with a cursor-tracked tooltip card, snap-to-point hover, and built-in X-axis labels.",
+      "install": "npx shadcn@latest add @spell/chart",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "app",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "blur-reveal",
+      "title": "Blur Reveal",
+      "category": "animation",
+      "description": "Animated text reveal with blur effect.",
+      "install": "npx shadcn@latest add @spell/blur-reveal",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "perspective-book",
+      "title": "Perspective Book",
+      "category": "display",
+      "description": "A 3D book component with hover animation and customizable appearance.",
+      "install": "npx shadcn@latest add @spell/perspective-book",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "badge",
+      "title": "Badge",
+      "category": "display",
+      "description": "A badge component with multiple color variants and sizes.",
+      "install": "npx shadcn@latest add @spell/badge",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "color-selector",
+      "title": "Color Selector",
+      "category": "input",
+      "description": "Interactive color picker component.",
+      "install": "npx shadcn@latest add @spell/color-selector",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "special-text",
+      "title": "Special Text",
+      "category": "animation",
+      "description": "Animated text with scramble effect.",
+      "install": "npx shadcn@latest add @spell/special-text",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "shimmer-text",
+      "title": "Shimmer Text",
+      "category": "animation",
+      "description": "Text with animated shimmer highlight effect.",
+      "install": "npx shadcn@latest add @spell/shimmer-text",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "highlighted-text",
+      "title": "Highlighted Text",
+      "category": "animation",
+      "description": "Text with sliding background highlight animation using mix-blend-mode.",
+      "install": "npx shadcn@latest add @spell/highlighted-text",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "rich-button",
+      "title": "Rich Button",
+      "category": "button",
+      "description": "A button component with rich styling and color variants.",
+      "install": "npx shadcn@latest add @spell/rich-button",
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "kbd",
+      "title": "Keyboard Shortcuts",
+      "category": "display",
+      "description": "Display keyboard shortcuts with proper key symbols.",
+      "install": "npx shadcn@latest add @spell/kbd",
+      "dependencies": [
+        "react-hotkeys-hook"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "label-input",
+      "title": "Label Input",
+      "category": "input",
+      "description": "Input field with floating label and password visibility toggle.",
+      "install": "npx shadcn@latest add @spell/label-input",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "spinner",
+      "title": "Spinner",
+      "category": "feedback",
+      "description": "A loading spinner component with customizable size and color.",
+      "install": "npx shadcn@latest add @spell/spinner",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "bars-spinner",
+      "title": "Bars Spinner",
+      "category": "feedback",
+      "description": "A loading spinner with rotating bars animation.",
+      "install": "npx shadcn@latest add @spell/bars-spinner",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "flow-button",
+      "title": "Flow Button",
+      "category": "button",
+      "description": "A button with animated flowing dashed border on hover.",
+      "install": "npx shadcn@latest add @spell/flow-button",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "slide-up-text",
+      "title": "Slide Up Text",
+      "category": "animation",
+      "description": "Text animation that slides up from bottom with stagger effect.",
+      "install": "npx shadcn@latest add @spell/slide-up-text",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "copy-button",
+      "title": "Copy Button",
+      "category": "button",
+      "description": "A copy-to-clipboard button with blur transition effect.",
+      "install": "npx shadcn@latest add @spell/copy-button",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "text-marquee",
+      "title": "Text Marquee",
+      "category": "animation",
+      "description": "Animated text marquee component with vertical scrolling.",
+      "install": "npx shadcn@latest add @spell/text-marquee",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "words-stagger",
+      "title": "Words Stagger",
+      "category": "animation",
+      "description": "Word-by-word text animation with blur, transform, and opacity effects.",
+      "install": "npx shadcn@latest add @spell/words-stagger",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "tilt-card",
+      "title": "Tilt Card",
+      "category": "interactive",
+      "description": "Interactive 3D tilt card with perspective hover effect and spotlight.",
+      "install": "npx shadcn@latest add @spell/tilt-card",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "marquee",
+      "title": "Marquee",
+      "category": "display",
+      "description": "Infinite scrolling marquee component with customizable speed and direction.",
+      "install": "npx shadcn@latest add @spell/marquee",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "signature",
+      "title": "Signature",
+      "category": "animation",
+      "description": "Animated signature component with handwriting effect using custom fonts.",
+      "install": "npx shadcn@latest add @spell/signature",
+      "dependencies": [
+        "motion",
+        "opentype.js",
+        "@types/opentype.js"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "heavy",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "randomized-text",
+      "title": "Randomized Text",
+      "category": "animation",
+      "description": "Text component with randomized character reveal animation.",
+      "install": "npx shadcn@latest add @spell/randomized-text",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "pop-button",
+      "title": "Pop Button",
+      "category": "button",
+      "description": "A playful 3D-style button with push-down animation effect.",
+      "install": "npx shadcn@latest add @spell/pop-button",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "tweet",
+      "title": "Tweet",
+      "category": "display",
+      "description": "Embed Twitter/X posts with custom styling.",
+      "install": "npx shadcn@latest add @spell/tweet",
+      "dependencies": [
+        "react-tweet",
+        "@icons-pack/react-simple-icons"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": true
+    },
+    {
+      "name": "spotify-card",
+      "title": "Spotify Card",
+      "category": "display",
+      "description": "Display Spotify tracks with album art and blurred background.",
+      "install": "npx shadcn@latest add @spell/spotify-card",
+      "dependencies": [
+        "@icons-pack/react-simple-icons",
+        "spotify-url-info"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": true
+    },
+    {
+      "name": "light-rays",
+      "title": "Light Rays",
+      "category": "background",
+      "description": "Animated light rays effect using WebGL shaders.",
+      "install": "npx shadcn@latest add @spell/light-rays",
+      "dependencies": [
+        "three"
+      ],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "heavy",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "animated-gradient",
+      "title": "Animated Gradient",
+      "category": "background",
+      "description": "Animated gradient background with presets and customizable swirl effects using WebGL.",
+      "install": "npx shadcn@latest add @spell/animated-gradient",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "heavy",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "animated-checkbox",
+      "title": "Animated Checkbox",
+      "category": "input",
+      "description": "Animated checkbox with spring transitions and strike-through text effect.",
+      "install": "npx shadcn@latest add @spell/animated-checkbox",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "exploding-input",
+      "title": "Exploding Input",
+      "category": "input",
+      "description": "Input component that spawns particle effects when typing.",
+      "install": "npx shadcn@latest add @spell/exploding-input",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "gradient-wave-text",
+      "title": "Gradient Wave Text",
+      "category": "animation",
+      "description": "Apple-style animated gradient text with wave effect.",
+      "install": "npx shadcn@latest add @spell/gradient-wave-text",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": true,
+      "externalRequests": false
+    },
+    {
+      "name": "logos-carousel",
+      "title": "Logos Carousel",
+      "category": "display",
+      "description": "Animated carousel component that cycles through sets of logos with staggered animations.",
+      "install": "npx shadcn@latest add @spell/logos-carousel",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "marketing",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "qr-code",
+      "title": "QR Code",
+      "category": "display",
+      "description": "QR code generator with rounded finder patterns and dot-style data modules.",
+      "install": "npx shadcn@latest add @spell/qr-code",
+      "dependencies": [
+        "qrcode"
+      ],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "medium",
+      "animated": false,
+      "externalRequests": false
+    },
+    {
+      "name": "fallback-avatar",
+      "title": "Fallback Avatar",
+      "category": "display",
+      "description": "A unique gradient avatar generated from a name string.",
+      "install": "npx shadcn@latest add @spell/fallback-avatar",
+      "dependencies": [],
+      "registryDependencies": [],
+      "surface": "both",
+      "weight": "light",
+      "animated": false,
+      "externalRequests": false
+    }
+  ]
+}

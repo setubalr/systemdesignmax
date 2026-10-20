@@ -1,0 +1,815 @@
+{
+  "total": 82,
+  "note": "Mapa das 82 skills originais para o local onde vivem após o merge.",
+  "skills": {
+    "design-taste-frontend": {
+      "role": "motor",
+      "stage": "direção + construção",
+      "invocation": "automática",
+      "upstream": "skills/design-taste-frontend/SKILL.md",
+      "mergedInto": "design-taste-frontend",
+      "path": "skills/design-taste-frontend/SKILL.md",
+      "mode": "engine"
+    },
+    "design-taste-frontend-v1": {
+      "role": "motor",
+      "stage": "direção (legado)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/design-taste-frontend-v1/SKILL.md",
+      "mergedInto": "design-engine-legacy",
+      "path": "skills/design-engine-legacy/references/v1.md",
+      "mode": "legacy-engine"
+    },
+    "design-taste-frontend-v2-experimental": {
+      "role": "motor",
+      "stage": "direção (legado)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/design-taste-frontend-v2-experimental/SKILL.md",
+      "mergedInto": "design-engine-legacy",
+      "path": "skills/design-engine-legacy/references/v2-experimental.md",
+      "mode": "legacy-engine"
+    },
+    "gpt-taste": {
+      "role": "estilo",
+      "stage": "direção (opt-in)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/gpt-taste/SKILL.md",
+      "mergedInto": "design-engine-legacy",
+      "path": "skills/design-engine-legacy/references/gpt-taste.md",
+      "mode": "legacy-engine"
+    },
+    "stitch-design-taste": {
+      "role": "adaptador",
+      "stage": "especificação",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/stitch-design-taste/SKILL.md",
+      "mergedInto": "design-engine-legacy",
+      "path": "skills/design-engine-legacy/references/stitch-design-taste.md",
+      "mode": "legacy-adapter"
+    },
+    "redesign-existing-projects": {
+      "role": "adaptador",
+      "stage": "redirecionamento",
+      "invocation": "alias (aposentada)",
+      "upstream": "skills/redesign-existing-projects/SKILL.md",
+      "mergedInto": "design-taste-frontend",
+      "path": "skills/design-taste-frontend/SKILL.md",
+      "mode": "alias",
+      "aliasOf": "design-taste-frontend"
+    },
+    "industrial-brutalist-ui": {
+      "role": "estilo",
+      "stage": "estilo (opt-in)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/industrial-brutalist-ui/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/industrial-brutalist-ui.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "minimalist-ui": {
+      "role": "estilo",
+      "stage": "estilo (opt-in)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/minimalist-ui/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/minimalist-ui.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "high-end-visual-design": {
+      "role": "estilo",
+      "stage": "estilo (opt-in)",
+      "invocation": "opt-in (só pelo nome)",
+      "upstream": "skills/high-end-visual-design/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/high-end-visual-design.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "agentic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/agentic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/agentic.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "ant": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/ant/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/ant.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "artistic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/artistic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/artistic.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "basic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/basic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/basic.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "bento": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/bento/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/bento.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "bold": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/bold/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/bold.md",
+      "mode": "style",
+      "family": "brutalist-bold"
+    },
+    "brutalism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/brutalism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/brutalism.md",
+      "mode": "style",
+      "family": "brutalist-bold"
+    },
+    "cafe": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/cafe/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/cafe.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "claude": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/claude/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/claude.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "claymorphism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/claymorphism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/claymorphism.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "clean": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/clean/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/clean.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "codex": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/codex/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/codex.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "colorful": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/colorful/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/colorful.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "contemporary": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/contemporary/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/contemporary.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "corporate": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/corporate/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/corporate.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "cosmic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/cosmic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/cosmic.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "creative": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/creative/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/creative.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "dithered": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/dithered/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/dithered.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "doodle": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/doodle/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/doodle.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "dramatic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/dramatic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/dramatic.md",
+      "mode": "style",
+      "family": "narrative-conversion"
+    },
+    "editorial": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/editorial/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/editorial.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "enterprise": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/enterprise/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/enterprise.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "expressive": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/expressive/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/expressive.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "fantasy": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/fantasy/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/fantasy.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "fiction": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/fiction/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/fiction.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "friendly": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/friendly/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/friendly.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "futuristic": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/futuristic/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/futuristic.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "geometric": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/geometric/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/geometric.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "glassmorphism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/glassmorphism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/glassmorphism.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "gradient": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/gradient/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/gradient.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "immersive": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/immersive/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/immersive.md",
+      "mode": "style",
+      "family": "narrative-conversion"
+    },
+    "impeccable": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/impeccable/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/impeccable.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "levels": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/levels/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/levels.md",
+      "mode": "style",
+      "family": "narrative-conversion"
+    },
+    "lingo": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/lingo/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/lingo.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "matrix": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/matrix/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/matrix.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "minimal": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/minimal/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/minimal.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "modern": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/modern/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/modern.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "mono": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/mono/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/mono.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "neobrutalism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/neobrutalism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/neobrutalism.md",
+      "mode": "style",
+      "family": "brutalist-bold"
+    },
+    "neon": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/neon/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/neon.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "neumorphism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/neumorphism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/neumorphism.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "pacman": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/pacman/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/pacman.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "paper": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/paper/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/paper.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "perspective": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/perspective/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/perspective.md",
+      "mode": "style",
+      "family": "tech-futurist"
+    },
+    "power": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/power/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/power.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "premium": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/premium/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/premium.md",
+      "mode": "style",
+      "family": "premium-dark"
+    },
+    "professional": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/professional/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/professional.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "pulse": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/pulse/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/pulse.md",
+      "mode": "style",
+      "family": "brutalist-bold"
+    },
+    "refined": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/refined/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/refined.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "retro": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/retro/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/retro.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "riso": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/riso/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/riso.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "roku": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/roku/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/roku.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "sega": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/sega/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/sega.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "shadcn": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/shadcn/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/shadcn.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "sketch": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/sketch/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/sketch.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "sleek": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/sleek/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/sleek.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "spacious": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/spacious/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/spacious.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "square": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/square/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/square.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "stitch": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/stitch/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/stitch.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "storytelling": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/storytelling/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/storytelling.md",
+      "mode": "style",
+      "family": "narrative-conversion"
+    },
+    "terracotta": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/terracotta/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/terracotta.md",
+      "mode": "style",
+      "family": "editorial-warm"
+    },
+    "tetris": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/tetris/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/tetris.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "vibrant": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/vibrant/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/vibrant.md",
+      "mode": "style",
+      "family": "playful-friendly"
+    },
+    "vintage": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/vintage/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/vintage.md",
+      "mode": "style",
+      "family": "retro-game"
+    },
+    "web-design-guidelines": {
+      "role": "auditoria",
+      "stage": "auditoria",
+      "invocation": "automática",
+      "upstream": "skills/web-design-guidelines/SKILL.md",
+      "mergedInto": "design-qa",
+      "path": "skills/design-qa/references/web-design-guidelines.md",
+      "mode": "qa-audit"
+    },
+    "playwright-cli": {
+      "role": "browser",
+      "stage": "browser",
+      "invocation": "automática",
+      "upstream": "skills/playwright-cli/SKILL.md",
+      "mergedInto": "design-qa",
+      "path": "skills/design-qa/references/playwright-cli.md",
+      "mode": "qa-browser"
+    },
+    "brandkit": {
+      "role": "imagem",
+      "stage": "imagem",
+      "invocation": "automática",
+      "upstream": "skills/brandkit/SKILL.md",
+      "mergedInto": "image-direction",
+      "path": "skills/image-direction/references/brandkit.md",
+      "mode": "image"
+    },
+    "image-to-code": {
+      "role": "imagem",
+      "stage": "imagem",
+      "invocation": "automática",
+      "upstream": "skills/image-to-code/SKILL.md",
+      "mergedInto": "image-direction",
+      "path": "skills/image-direction/references/image-to-code.md",
+      "mode": "image"
+    },
+    "imagegen-frontend-mobile": {
+      "role": "imagem",
+      "stage": "imagem",
+      "invocation": "automática",
+      "upstream": "skills/imagegen-frontend-mobile/SKILL.md",
+      "mergedInto": "image-direction",
+      "path": "skills/image-direction/references/imagegen-frontend-mobile.md",
+      "mode": "image"
+    },
+    "imagegen-frontend-web": {
+      "role": "imagem",
+      "stage": "imagem",
+      "invocation": "automática",
+      "upstream": "skills/imagegen-frontend-web/SKILL.md",
+      "mergedInto": "image-direction",
+      "path": "skills/image-direction/references/imagegen-frontend-web.md",
+      "mode": "image"
+    },
+    "flat": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/flat/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/flat.md",
+      "mode": "style",
+      "family": "minimal-clean"
+    },
+    "material": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/material/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/material.md",
+      "mode": "style",
+      "family": "corporate-data"
+    },
+    "skeumorphism": {
+      "role": "estilo",
+      "stage": "estilo",
+      "invocation": "automática",
+      "upstream": "skills/skeumorphism/SKILL.md",
+      "mergedInto": "design-styles",
+      "path": "skills/design-styles/styles/skeumorphism.md",
+      "mode": "style",
+      "family": "retro-game"
+    }
+  }
+}

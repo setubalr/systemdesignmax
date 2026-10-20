@@ -1,0 +1,20 @@
+{
+  "name": "systemdesignmax",
+  "owner": { "name": "setubalr", "url": "https://github.com/setubalr" },
+  "metadata": {
+    "description": "Marketplace do plugin systemdesignmax: redesign e design de sistemas com skills unificadas.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "systemdesignmax",
+      "source": "./",
+      "description": "Orquestradora de redesign: motor de direção, 70 estilos com tokens, shadcn/ui e Spell UI gratuitos, imagem e QA em browser real. Comando /systemdesignmax:design.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "category": "design",
+      "keywords": ["design", "redesign", "shadcn", "ui", "accessibility"],
+      "homepage": "https://github.com/setubalr/systemdesignmax"
+    }
+  ]
+}
