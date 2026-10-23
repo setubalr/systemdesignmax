@@ -9,6 +9,8 @@
 //                 [--tone quiet|bold|warm|technical|playful|luxury|editorial]
 //                 [--have photography,product-photo,product-ui,illustration,video]   assets you really have
 //                 [--keep palette,type]        the brand already fixes these; draw the rest
+//                 [--style <slug>]             flavour with a design-styles style: its type, colours and allowed rules
+//                 [--allow rule,rule]          house rules the inspector and lint accept for this build
 //                 [--avoid id,id] [--seed N] [--out DIR]
 //                 [--options 3]                show three dealt directions to choose from, write nothing
 //                 [--direction <id>]           deal the full sheet for the chosen direction
@@ -30,6 +32,17 @@ const LIB = join(HERE, '..', 'library');
 const ASSETS_PATH = join(HERE, 'assets.mjs').split('\\').join('/');
 const ASSETS_CMD = `node ${/\s/.test(ASSETS_PATH) ? `"${ASSETS_PATH}"` : ASSETS_PATH}`;
 const load = (name) => JSON.parse(readFileSync(join(LIB, name + '.json'), 'utf8'));
+// A visual style from the sibling design-styles skill (systemdesignmax plugin) can flavour the sheet: its type and
+// colours replace the dealt ones, and the house rules its language needs are allowed. Composition stays dealt.
+const STYLES = join(HERE, '..', '..', 'design-styles', 'styles');
+function loadStyle(slug) {
+  const index = existsSync(join(STYLES, 'index.json')) ? JSON.parse(readFileSync(join(STYLES, 'index.json'), 'utf8')) : null;
+  if (!index) { console.error(`--style needs the design-styles skill next to this one (${STYLES}).`); process.exit(2); }
+  const m = index[slug];
+  if (!m) { console.error(`No style "${slug}". Slugs are in ${join(STYLES, 'index.json')}.`); process.exit(2); }
+  const allowances = existsSync(join(STYLES, 'allowances.json')) ? JSON.parse(readFileSync(join(STYLES, 'allowances.json'), 'utf8')).styles : {};
+  return { slug, name: m.name, description: m.description || '', fonts: m.fonts || null, tokens: m.tokens || null, allow: allowances[slug] || [], file: join(STYLES, slug + '.md').split('\\').join('/') };
+}
 
 const argv = process.argv.slice(2);
 const opt = (name, def) => { const i = argv.indexOf('--' + name); if (i === -1) return def; const v = argv[i + 1]; return v === undefined || v.startsWith('--') ? true : v; };
@@ -183,7 +196,13 @@ if (opt('redraw')) {
     have: list(opt('have')), keep: list(opt('keep')), avoid: list(opt('avoid')),
     sections: (requested.length ? requested : DEFAULT_SECTIONS[sector]).map((r) => ROLE_ALIAS[r] || r).filter((r) => r !== 'hero'),
     direction: typeof opt('direction') === 'string' ? opt('direction') : null,
+    allow: list(opt('allow')), style: null,
   };
+  if (typeof opt('style') === 'string') {
+    input.style = loadStyle(opt('style'));
+    for (const k of ['palette', 'type']) if (!input.keep.includes(k)) input.keep.push(k);
+    input.allow = [...new Set([...input.allow, ...input.style.allow])];
+  }
   if (input.direction && !L.directions.some((d) => d.id === input.direction)) { console.error(`No direction with id ${input.direction}. List them with --list directions.`); process.exit(2); }
   if (opt('options')) {
     const n = Math.max(2, Math.min(5, Number(opt('options')) || 3));
@@ -247,7 +266,7 @@ function deal(input, redraws) {
   const pool = directionPool(input);
   const forced = input.direction ? L.directions.find((d) => d.id === input.direction) : null;
   const dir = forced || pick(fresh(pool, recent('direction', Math.min(5, pool.length - 1))));
-  const s = { version: 1, at: new Date().toISOString(), seed: startSeed, redraws, input, imagery: imageryMode(input), allow: dir.allow || [], direction: dir };
+  const s = { version: 1, at: new Date().toISOString(), seed: startSeed, redraws, input, imagery: imageryMode(input), allow: [...new Set([...(dir.allow || []), ...(input.allow || [])])], direction: dir };
   s.hero = dealHero(dir, input, []);
   s.type = input.keep.includes('type') ? null : dealType(dir, []);
   s.palette = input.keep.includes('palette') ? null : dealPalette(dir, input, []);
@@ -462,12 +481,24 @@ function render(s) {
   p('| | |'); p('| --- | --- |');
   p(`| Direction | ${d.name} |`);
   p(`| Hero | ${s.hero.name} |`);
-  p(`| Type | ${s.type ? s.type.name : 'kept from the brand'} |`);
-  p(`| Colour | ${s.palette ? s.palette.name : 'kept from the brand'} |`);
+  const st = s.input.style;
+  p(`| Type | ${s.type ? s.type.name : st ? `from the style "${st.name}"` : 'kept from the brand'} |`);
+  p(`| Colour | ${s.palette ? s.palette.name : st ? `from the style "${st.name}"` : 'kept from the brand'} |`);
   p(`| Sections | ${s.sections.map((x) => x.role + (x.name && x.name !== x.role ? ' (' + x.name + ')' : '')).join(' → ')} |`);
   p(`| Motion | ${s.motion ? s.motion.name : '—'} |`);
   p(`| Photographs | ${s.photos ? 'the "' + (s.photos.title || s.photos.set) + '" set, as atmosphere' : 'none'} |`);
   p();
+  if (st) {
+    p(`## Style: ${st.name} (\`${st.slug}\`)`);
+    p();
+    p(`${st.description} The style is the flavour, the direction is the composition: build the hero, sections and`);
+    p(`scenes this sheet deals, and take type, colour and shape from the style (read ${st.file}). If the brand fixes a`);
+    p('colour or face, the brand wins over the style.');
+    if (st.fonts) p(`- Type: ${[...new Set([st.fonts.display, st.fonts.primary].filter(Boolean))].join(' for display, ')}${st.fonts.display && st.fonts.primary && st.fonts.display !== st.fonts.primary ? ' for text' : ''}. A face that is not free gets a free one of the same class, never a default sans.`);
+    if (st.tokens) p(`- Colour roles: ground ${st.tokens.surface} · ink ${st.tokens.text} · accent ${st.tokens.primary}${st.tokens.secondary ? ' · second ' + st.tokens.secondary : ''}. Keep the sheet's proportions: one ground, one ink, one accent.`);
+    p(`- Allowed by this style: ${st.allow.length ? st.allow.join(', ') : 'nothing; every house rule holds'}. Every other house rule holds.`);
+    p();
+  }
   p('This is the direction for this build. Adopt it. Do not blend it with the layout you would have made anyway,');
   p('and do not redraw because it is unfamiliar: unfamiliar is the point. Redraw a slot only when it conflicts');
   p('with a stated brand constraint or needs an asset that does not exist, and say why in your report.');

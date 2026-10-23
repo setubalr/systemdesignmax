@@ -1,67 +1,62 @@
-# Fluxo detalhado (etapas 0–7)
+# Fluxo detalhado (etapas 0–6)
 
-Cada etapa tem **entrada**, **ações**, **saída** e **critério de parada**. Não avance sem a saída.
+Cada etapa tem uma saída. Não avance sem ela.
 
 ## 0. Proteger
 
-- Entrada: pedido do usuário. Pergunte **uma vez**, em bloco, o que faltar: projeto/pasta, ambiente (local/staging/
-  produção), o que *não* pode mudar (marca, rotas, dados), se pode editar arquivos, se publicar está autorizado.
-- Ações: `git status` e branch; crie um ponto de retorno (branch `redesign/<tema>` ou commit) **somente se autorizado**;
-  anote o comando de build/dev. Nunca trabalhe diretamente sobre produção.
-- Saída: autorização de edição registrada; mecanismo de retorno; estado inicial (árvore limpa ou lista de alterações
-  pré-existentes do usuário, que **não** são suas).
-- Pare se: edição não autorizada ou o diretório não é o projeto certo.
+- Confirme projeto/pasta, ambiente (local/staging/produção) e se pode editar. Junte essas perguntas às da
+  descoberta (etapa 1) numa única mensagem.
+- `git status` e branch; crie um ponto de retorno (branch `redesign/<tema>` ou commit) se autorizado. Anote os
+  comandos de build e dev. Nunca trabalhe direto sobre produção.
+- Alterações pré-existentes do usuário não são suas: não as reverta nem as inclua.
+- Pare se a edição não foi autorizada ou a pasta não é o projeto.
 
-## 1. Diagnosticar
+## 1. Entender
 
-- Mapear: framework, estilos (Tailwind v3/v4, CSS modules…), `components.json`, rotas, jornadas críticas, tokens
-  existentes, componentes reutilizáveis, tema claro/escuro, i18n.
-- Rodar o app e **capturar baseline**: screenshots de cada rota principal em 3 larguras, estados vazio/erro quando
-  acessíveis. Limitações (login, dados) viram "bloqueado", não suposição.
-- Se `design-taste-frontend` está no escopo, siga a rota **Redesign or review** dele para o registro do "antes".
-- Saída: inventário curto + baseline com caminhos de arquivo + lista do que o projeto faz bem (preservar).
+**Projeto (técnico).** Framework, método de estilo (Tailwind v3/v4, CSS modules…), `components.json`, rotas,
+jornadas críticas, tokens e componentes existentes, temas, i18n. Rode o app e grave o "antes" com o motor
+(`inspect.mjs <url> --out .taste-skill/before`, `--app` para telas de trabalho). Áreas sem acesso (login, dados)
+ficam marcadas como bloqueadas, não supostas.
 
-## 2. Direcionar
+**Produto.** Siga `descoberta.md` e grave `.taste-skill/DESIGN-BRIEF.md`. É a etapa que impede o resultado de sair
+igual a todos os outros; não a encurte para ganhar tempo em um redesign completo.
 
-- Classificar a superfície (página × app) e escolher o motor (padrão: `design-taste-frontend`).
-- Escolher estilo (`design-styles`): 1 principal + até 2 alternativas, com motivo. Marca obrigatória vence.
-- Gerar tokens (`ui-components` → `style-to-shadcn.mjs` se shadcn) e **critérios de aceite mensuráveis**
-  (ex.: contraste ≥ 4.5:1; sem scroll horizontal em 375 px; todas as rotas com foco visível; LCP não pior que o baseline).
-- Mudança grande de marca/navegação → apresentar a direção (tokens + 1 tela de referência) e **obter aceite**.
-- Saída: decisão registrada (motor, estilo, descartados, desvios) + critérios de aceite.
+Saída: brief + baseline + lista do que o projeto já faz bem (preservar).
 
-## 3. Assets (somente se aplicável)
+## 2. Conceituar
 
-- Entrar em `image-direction` apenas se pedido. Confirmar ferramenta/custo, gerar arquivo real, abrir e analisar.
-- Sem ferramenta: marcar *bloqueada*, propor wireframe em HTML ou descrição; **não** alegar geração.
+- `draw.mjs --options 3` com os parâmetros tirados do brief (`--sector`, `--tone`, `--have`, `--keep`).
+- Monte os três conceitos de `descoberta.md` §8. Estilo de `design-styles` só no conceito que precisa dele.
+- Mostre os conceitos e obtenha a escolha (obrigatória para mudança grande de marca ou navegação; `--auto` deixa
+  você decidir nos demais casos). Registre no brief.
 
-## 4. Implementar
+## 3. Dirigir
 
-- Ordem: tokens/tema → componentes base (ui-components) → **uma tela representativa** → validar (etapa 6 resumida:
-  build + screenshot + teclado) → só então ampliar às demais telas.
-- Preservar handlers, chamadas de API, formulários, permissões, rotas e dados. Mudança de comportamento exige
-  pedido explícito.
-- Instalar componentes por `search → view → add --dry-run → add`; listar dependências novas.
-- Commits pequenos e descritivos (se o usuário autorizou commits).
+- Deal completo: `draw.mjs <mesmos argumentos> --direction <id> [--style <slug>]`. Com `--style`, o motor usa a
+  tipografia e a paleta do estilo, mantém a composição e libera as regras do estilo no inspetor e no lint.
+- Projeto shadcn/Tailwind: `ui-components/scripts/style-to-shadcn.mjs <slug>` gera o tema com contraste medido.
+- Escreva a frase da ideia e a coisa viva (motor, passo 4) a partir do inventário do brief.
+- Critérios de aceite mensuráveis: contraste ≥ 4.5:1, sem scroll horizontal em 390 px, foco visível, `inspect.mjs`
+  sem FAIL, LCP não pior que o baseline.
 
-## 5. Auditar
+## 4. Construir
 
-- Rodar gates do projeto (build/lint/typecheck/testes) e registrar comando + resultado (ou "não existe").
-- `design-qa`: auditoria Vercel (arquivo:linha) + checagens do motor (ex.: `inspect.mjs`/`lint.mjs` do
-  `design-taste-frontend` quando o ambiente permitir executá-los).
-- Saída: lista de achados com severidade.
+- Ordem: tokens/tema → componentes base → **uma tela representativa** → checagem rápida (build + screenshot +
+  teclado) → demais telas.
+- Siga o run do motor (cópia, imagem, movimento, cenas). Instale componentes por
+  `search → view → add --dry-run → add` e liste dependências novas.
+- Preserve handlers, chamadas de API, formulários, permissões, rotas e dados. Mudar comportamento exige pedido.
 
-## 6. Validar
+## 5. Verificar
 
-- Subir a prévia e percorrer as jornadas com `design-qa`/playwright-cli: desktop, tablet, mobile; teclado; estados;
-  temas existentes; `prefers-reduced-motion`.
-- Escrever dados **somente** de teste autorizados. Sem sessão para áreas protegidas → bloqueado.
-- Corrigir e retestar; máx. 3 tentativas por abordagem.
-- Saída: evidências antes × depois + critérios de aceite marcados (cumprido / não cumprido / não testado).
+- Gates do projeto (build/lint/typecheck/testes): comando e resultado, ou "não existe".
+- Motor: `lint.mjs` e `inspect.mjs` (e `scenes.mjs` com cenas) até 0 FAIL; olhar todos os screenshots e
+  criticar com `critique.md`, no máximo três rodadas.
+- `design-qa`: auditoria Vercel (arquivo:linha) e jornadas em browser (desktop, tablet, mobile, teclado, estados,
+  temas, `prefers-reduced-motion`). Dados só de teste autorizados.
+- Compare o resultado com o brief: o sentimento-alvo, a hipótese e o que devia ser evitado da categoria.
 
-## 7. Entregar
+## 6. Entregar
 
-- Separar o **implementado** do **comprovado**. Listar pendências e riscos. Informar como reverter.
-- Publicar apenas com autorização explícita e validação compatível; depois, verificar produção (a rota principal e um
-  fluxo crítico) e reportar o resultado real.
-- Fechar com o relatório (`relatorio.md`).
+- Relatório curto (`relatorio.md`): implementado × comprovado, pendências, como reverter.
+- Publicar só com autorização explícita; depois verifique a rota principal e um fluxo crítico em produção.

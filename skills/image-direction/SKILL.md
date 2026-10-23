@@ -24,8 +24,9 @@ Combinações: `brandkit` pode preceder `imagegen-frontend-web`/`image-to-code` 
 
 ## Regras comuns (antes de qualquer geração)
 
-1. **Escopo explícito.** Só entre aqui se o usuário pediu imagem/referência/prancha ou se o orquestrador decidiu que a
-   etapa 3 ("Preparar assets") se aplica. Redesign de dashboard/app de trabalho normalmente **não** precisa disso.
+1. **Escopo explícito.** Só entre aqui se o usuário pediu imagem/referência/prancha (`--images`) ou se o conceito
+   escolhido no `DESIGN-BRIEF` depende de imagens que o projeto não tem e há ferramenta de geração. Redesign de
+   dashboard/app de trabalho normalmente **não** precisa disso.
 2. **Ferramenta e custo.** Descubra qual ferramenta de geração de imagem o ambiente tem e estime o custo/quantidade
    (ex.: 8 seções = 8 imagens). Se não houver ferramenta, marque o modo como **bloqueado**, proponha alternativa
    (wireframe em HTML, descrição por seção) e **não diga que gerou imagem**.

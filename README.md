@@ -15,9 +15,9 @@ orquestradora, um agente (system prompt) e um comando único.
 
 | Componente | Nome | O que faz |
 |---|---|---|
-| Comando | `/systemdesignmax:design` | entrada única; aceita `--audit`, `--style`, `--engine`, `--images`, `--publish` |
+| Comando | `/systemdesignmax:design` | entrada única; aceita `--audit`, `--auto`, `--style`, `--engine`, `--images`, `--publish` |
 | Agente | `systemdesignmax` | system prompt completo (`prompts/system-prompt.md` é a fonte) |
-| Skill | `systemdesignmax` | **orquestradora**: fluxo 0–7, seleção, conflitos, evidências |
+| Skill | `systemdesignmax` | **orquestradora**: fluxo 0–6, descoberta do produto (`DESIGN-BRIEF`), três conceitos, conflitos |
 | Skill | `design-taste-frontend` | **motor** de direção e construção (inclui o antigo `redesign-existing-projects`) |
 | Skill | `design-styles` | **70 estilos** com tokens + matriz por tipo de produto |
 | Skill | `ui-components` | **shadcn/ui + Spell UI** gratuitos; converte estilo → tema; contraste WCAG |
@@ -72,25 +72,43 @@ No Claude Code:
 /plugin install systemdesignmax@systemdesignmax
 ```
 
-Requisitos: Node.js ≥ 18 (scripts e `npx shadcn`). Para validação em browser: `playwright-cli`
-(ver `skills/design-qa/references/playwright-cli.md`). O motor `design-taste-frontend` usa seus próprios scripts
-Node (inspetor em browser real) quando o ambiente permite executá-los.
+Requisitos:
+
+- **Node.js 22 LTS ou mais novo** (recomendado). O inspetor do motor (`inspect.mjs`, `scenes.mjs`) usa o WebSocket
+  nativo do Node 22. Com Node 18–21 funcionam `lint.mjs`, `draw.mjs`, `npx shadcn` e o MCP, mas não o inspetor.
+- **Chrome, Edge ou Chromium** instalado (ou `CHROME_PATH`) para o inspetor.
+- `playwright-cli` para a validação de jornadas (ver `skills/design-qa/references/playwright-cli.md`).
+
+Para conferir tudo de uma vez:
+
+```bash
+node scripts/doctor.mjs
+```
+
+O MCP do shadcn é iniciado por `scripts/mcp-shadcn.mjs`, que chama `npx -y shadcn@latest mcp` de forma portátil.
+No Windows, chamar `npx` direto falha (`ENOENT`, porque o executável é `npx.cmd`); o lançador resolve isso.
 
 Outros agentes (Codex, Cursor…): copie a pasta `skills/` para o mecanismo de skills do agente e use
 [`prompts/system-prompt.md`](prompts/system-prompt.md) como instrução de sistema.
 
 ## Como o agente decide (resumo)
 
-1. **Proteger → Diagnosticar → Direcionar → (Assets) → Implementar → Auditar → Validar → Entregar.**
-2. Precedência: segurança → escopo do usuário → funcionalidade e acessibilidade → marca obrigatória → estilo → estética das dependências.
-3. Um motor; um estilo por superfície; nunca misturar; legados e 3 estilos clássicos só por pedido nominal.
-4. Nunca afirma ter rodado/gerado/publicado sem a ação real; separa **implementado** de **comprovado**.
+1. **Proteger → Entender (projeto + produto) → Conceituar → Dirigir → Construir → Verificar → Entregar.**
+2. **Descoberta antes do design:** público, ação principal, sentimento-alvo, concorrentes reais, o que só o produto
+   tem e eixos de personalidade viram `.taste-skill/DESIGN-BRIEF.md`. Nenhum estilo é escolhido antes disso.
+3. **Três conceitos** que diferem em pelo menos três eixos; o usuário escolhe (ou `--auto`).
+4. **O motor é o dono da direção** (ideia, composição, imagem, movimento). Um estilo é um sabor opcional:
+   `draw.mjs --style <slug>` traz tipografia, paleta e as regras que o estilo libera (`styles/allowances.json`),
+   sem trocar a composição.
+5. Precedência: segurança → escopo do usuário → funcionalidade e acessibilidade → marca obrigatória → conceito escolhido → dependências.
+6. Nunca afirma ter rodado/gerado/publicado sem a ação real; separa **implementado** de **comprovado**.
 
 ## Manutenção
 
 ```bash
 node scripts/validate.mjs        # 780+ verificações: frontmatter, links, 82 mapeadas, 67 estilos × contraste, manifestos
 node scripts/sync-prompt.mjs     # regenera agents/systemdesignmax.md a partir de prompts/system-prompt.md
+node scripts/doctor.mjs          # confere Node, npx, navegador e playwright-cli
 
 # regenerar dados a partir das fontes (clonadas à parte)
 node scripts/maintenance/build-registry.mjs --bergside <awesome-design-skills/skills> --classics <taste-skill-classics/skills>

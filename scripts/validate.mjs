@@ -3,6 +3,7 @@
 //   node scripts/validate.mjs
 import fs from "node:fs";
 import path from "node:path";
+import os from "node:os";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
@@ -112,7 +113,22 @@ const market = JSON.parse(read(path.join(root, ".claude-plugin/marketplace.json"
 const mcp = JSON.parse(read(path.join(root, ".mcp.json")));
 ok(plugin.name === "systemdesignmax" && market.plugins[0].name === plugin.name, "nomes do plugin/marketplace divergem");
 ok(plugin.version === market.plugins[0].version, "versão do plugin e do marketplace divergem");
-ok(mcp.mcpServers?.shadcn?.command === "npx", ".mcp.json: servidor shadcn ausente");
+const shadcnMcp = mcp.mcpServers?.shadcn;
+ok(shadcnMcp?.command === "node" && shadcnMcp.args?.[0] === "${CLAUDE_PLUGIN_ROOT}/scripts/mcp-shadcn.mjs", ".mcp.json: o shadcn deve iniciar por node ${CLAUDE_PLUGIN_ROOT}/scripts/mcp-shadcn.mjs (npx direto falha no Windows)");
+ok(fs.existsSync(path.join(root, "scripts/mcp-shadcn.mjs")), "scripts/mcp-shadcn.mjs ausente");
+
+// ---------- descoberta e hierarquia motor × estilo ----------
+const orchestrator = read(path.join(skillsDir, "systemdesignmax/SKILL.md"));
+ok(orchestrator.includes("references/descoberta.md") && fs.existsSync(path.join(skillsDir, "systemdesignmax/references/descoberta.md")), "a orquestradora deve apontar para references/descoberta.md");
+ok(orchestrator.includes("DESIGN-BRIEF.md"), "a orquestradora deve exigir o DESIGN-BRIEF.md");
+const allowances = JSON.parse(read(path.join(stylesDir, "allowances.json"))).styles;
+const rulesSrc = read(path.join(skillsDir, "design-taste-frontend/scripts/lib/rules.mjs")) + read(path.join(skillsDir, "design-taste-frontend/scripts/lint.mjs"));
+for (const [s, rules] of Object.entries(allowances)) {
+  ok(slugs.includes(s), `allowances.json: estilo inexistente ${s}`);
+  for (const r of rules) ok(rulesSrc.includes(`'${r}'`), `allowances.json: ${s} libera regra desconhecida ${r}`);
+}
+const drawStyle = spawnSync(process.execPath, [path.join(skillsDir, "design-taste-frontend/scripts/draw.mjs"), "--sector", "saas", "--brief", "validate", "--options", "2", "--style", "glassmorphism"], { encoding: "utf8", env: { ...process.env, TASTE_SKILL_HISTORY: path.join(os.tmpdir(), "sdm-validate-history.json") } });
+ok(drawStyle.status === 0, `draw.mjs --style falhou: ${(drawStyle.stderr || "").slice(0, 160)}`);
 
 // ---------- agente em sincronia com o prompt ----------
 const sync = spawnSync(process.execPath, [path.join(root, "scripts/sync-prompt.mjs"), "--check"], { encoding: "utf8" });

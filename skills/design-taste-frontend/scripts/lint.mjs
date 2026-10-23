@@ -2,7 +2,7 @@
 // tasteskill / lint — static scan of source files for the tells this skill bans.
 // Catches them before a render, plus the ones a render cannot see (copy habits, motion values).
 //
-//   node lint.mjs [files or directories ...] [--app] [--json]
+//   node lint.mjs [files or directories ...] [--app] [--allow rule,rule] [--json]
 //
 // Exit code 1 when any FAIL is found. Zero dependencies.
 import { readFileSync, readdirSync, statSync } from 'node:fs';
@@ -13,9 +13,12 @@ const asJson = args.includes('--json');
 // App screens (references/app-screens.md) keep quiet table and panel lines, faint shadows, data labels
 // and their own typefaces; a sheet dealt with draw.mjs --app switches this on by itself.
 let appMode = args.includes('--app');
-try { if (JSON.parse(readFileSync('.taste-skill/direction.json', 'utf8')).kind === 'app') appMode = true; } catch {}
+// Rules the drawn direction or its style allow (draw.mjs --style / --allow) are skipped, as in inspect.mjs.
+const allowAt = args.indexOf('--allow');
+const allow = new Set(allowAt > -1 && args[allowAt + 1] && !args[allowAt + 1].startsWith('--') ? args[allowAt + 1].split(',').filter(Boolean) : []);
+try { const d = JSON.parse(readFileSync('.taste-skill/direction.json', 'utf8')); if (d.kind === 'app') appMode = true; for (const r of d.allow || []) allow.add(r); } catch {}
 const APP_LEVEL = { hairline: null, 'outlined-box': null, 'default-font': null, numbering: 'WARN', mono: 'WARN', shadow: 'WARN', eyebrow: 'WARN', 'cta-copy': null, 'h-screen': null };
-const roots = args.filter((a) => !a.startsWith('--'));
+const roots = args.filter((a, i) => !a.startsWith('--') && !(i === allowAt + 1 && allowAt > -1));
 if (!roots.length) roots.push('.');
 const EXT = new Set(['.html', '.htm', '.css', '.scss', '.less', '.js', '.jsx', '.ts', '.tsx', '.vue', '.svelte', '.astro', '.mdx']);
 const SKIP = new Set(['node_modules', '.git', '.next', '.nuxt', '.svelte-kit', 'dist', 'build', 'out', '.vercel', '.taste-skill', 'coverage', '.turbo', 'vendor']);
@@ -83,7 +86,7 @@ for (const file of files) {
     if (/taste-skill-ignore/.test(line)) return;
     if (!/^\s*(\/\/|\/\*|\*|<!--)/.test(line)) emDashes += (line.replace(/\/\/.*$|\/\*.*?\*\/|<!--.*?-->/g, '').match(/—/g) || []).length; // comments are not copy
     for (const [level, id, re, message] of R) {
-      if (!level) continue;
+      if (!level || allow.has(id)) continue;
       if (id === 'mono' && (codeLine || /(^|[\s,>+~(])(pre|code|kbd|samp)\b|code/i.test(selector))) continue; // real code may be monospace
       if ((id === 'hairline' || id === 'outlined-box') && /(^|[\s,>+~(])(table|thead|tbody|tfoot|tr|td|th|input|textarea|select|fieldset)\b/i.test(selector)) continue; // real tables and form fields keep their lines
       if (inUi && (id === 'hairline' || id === 'outlined-box' || id === 'shadow')) continue;

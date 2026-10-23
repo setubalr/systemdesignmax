@@ -1,40 +1,29 @@
 # Modelo de relatório
 
-Use este modelo ao final (e uma versão curta em cada marco). Seja factual: cada linha de "Comprovado" aponta uma evidência.
+Curto e factual. O relatório existe para a pessoa entender o que mudou e decidir o próximo passo, não para provar
+conformidade com o processo.
 
 ```markdown
-## Resultado — <projeto> (<data>)
+## Resultado — <projeto>
 
-**Escopo:** <rotas/telas/componentes tratados> · **Fora do escopo:** <o que não foi tocado>
-**Ambiente:** <URL/porta · commit/branch · navegador · larguras · versões (node, shadcn, playwright-cli)>
-
-### Direção
-- Motor: <design-taste-frontend | legado: …>
-- Estilo: <slug> (alternativas descartadas: <slug — motivo>, …) · Desvios: <regra → motivo>
-- Componentes: <@shadcn/… , @spell/… instalados · recusados: … (motivo)>
-- Classificação das 82 originais: selecionadas <n> · alternativas <n> · não aplicáveis <n> · bloqueadas <n> · alias <n>
+**Conceito:** <nome> — <frase da hipótese do brief>
+**Direção:** <direção do motor (seed)> · estilo: <slug ou "nenhum"> · marca mantida: <o quê>
+**Ideia e coisa viva:** <frase da ideia> · <a interação>
 
 ### Mudanças
-- <arquivo/área — o que mudou>
+- <área/arquivo> — <o que mudou>
 
-### Comprovado (evidência)
-| Critério de aceite | Resultado | Evidência |
-|---|---|---|
-| Contraste ≥ 4.5:1 | cumprido | <comando/medição> |
-| Sem scroll horizontal a 375 px | cumprido | <screenshot> |
+### Comprovado
+- <critério> — <resultado> — <evidência: comando, medição ou screenshot>
 
-### Comandos e resultados
-- `<comando>` → <saída resumida / código de saída>
+### Não feito ou não testado
+- <item> — <motivo>
 
-### Falhas, não testado, bloqueado
-- <item — motivo>
+### Para trocar antes de publicar
+- <conteúdo de exemplo, imagens provisórias, créditos de imagens encontradas>
 
-### Antes × depois
-- <rota>: <caminho do antes> × <caminho do depois>
-
-### Próximo passo · Como reverter
-- <passo> · `git checkout <ref>` / descartar branch `<nome>`
+**Como reverter:** <branch/commit>
 ```
 
-Regras do relatório: não alegar redesign completo se só parte foi feita; separar *implementado* de *comprovado*;
-incluir o que falhou; não editar critérios depois de medir.
+Regras: não alegar redesign completo se só parte foi feita; separar implementado de comprovado; incluir o que
+falhou; não mudar critérios depois de medir.

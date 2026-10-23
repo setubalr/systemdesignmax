@@ -16,22 +16,38 @@ styles/<slug>.md       um arquivo por estilo (leia SÓ o escolhido)
 
 ## Papéis — quem manda em quê
 
-- **Motor** (`design-taste-frontend`): processo, direção de arte, inspeção em browser. Decide *como* trabalhar.
-- **Estilo** (esta skill): contrato visual — tipografia, cor, forma, tom. Decide *com qual aparência*.
+- **Motor** (`design-taste-frontend`): **dono da direção** — ideia, composição, herói, seções, imagem,
+  movimento e os gates do inspetor.
+- **Estilo** (esta skill): **sabor opcional** — tipografia, paleta, forma e as regras do motor que a sua
+  linguagem precisa. Nunca troca a composição sorteada pelo motor.
 - **Marca existente do projeto** vence o estilo. O estilo só preenche o que a marca não define.
-- **Um proprietário visual por superfície.** Superfícies diferentes (landing vs. app) podem usar estilos
-  diferentes **se compartilharem a identidade do projeto** (logo, cor de marca, voz, tipografia-base).
+- **Um sabor por superfície.** Superfícies diferentes (landing vs. app) podem usar estilos diferentes **se
+  compartilharem a identidade do projeto** (logo, cor de marca, voz, tipografia-base).
 
-## Como escolher (nesta ordem)
+## Quando usar um estilo (e quando não)
 
-1. **Há identidade obrigatória?** Se sim, estilo = o que menos conflita, ou nenhum (derive tokens da marca).
-2. **O usuário nomeou o estilo?** Use-o. Os 3 clássicos (`minimalist-ui`, `industrial-brutalist-ui`,
-   `high-end-visual-design`) só rodam quando nomeados.
-3. **Senão, filtre pela matriz abaixo** por tipo de produto e rejeite os estilos cuja coluna "Evitar em" colide
-   com o caso (`index.json` → `avoid`). Fique com **1 principal e até 2 alternativas**.
-4. **Leia apenas o arquivo do escolhido** (`styles/<slug>.md`). Não carregue os outros "para comparar".
-5. **Registre a decisão**: estilo, alternativas descartadas e por quê, desvios assumidos.
-6. Entregue os tokens ao `ui-components` (`style-to-shadcn.mjs <slug>`) se o projeto usa shadcn/Tailwind.
+Sem estilo, o motor sorteia tipografia e paleta da própria biblioteca (44 sistemas de tipo, 56 paletas), e isso já
+varia de projeto para projeto. Um estilo entra quando:
+
+- o usuário o nomeou (os 3 clássicos `minimalist-ui`, `industrial-brutalist-ui` e `high-end-visual-design` só
+  entram assim); ou
+- a personalidade do `DESIGN-BRIEF` pede uma linguagem que o motor não sorteia: vidro, neon, clay, neumorfismo,
+  pixel/retrô, brutalismo, rabisco, papel e afins.
+
+Não use um estilo só para "ter um estilo". Escolher `shadcn` ou `clean` para todo SaaS é exatamente o que torna
+os resultados iguais.
+
+## Como aplicar
+
+1. **Há identidade obrigatória?** A marca fixa cor e fonte (`--keep palette,type` no motor); o estilo contribui só
+   forma e regras liberadas, ou fica de fora.
+2. **Candidatos:** a matriz abaixo é ponto de partida por tipo de produto. Cruze com os eixos do brief (tom,
+   expressão, época, temperatura) e rejeite os que colidem com `index.json` → `avoid`.
+3. **Leia apenas o arquivo do escolhido** (`styles/<slug>.md`).
+4. **Entregue ao motor:** `draw.mjs ... --direction <id> --style <slug>`. O sheet passa a mostrar tipografia e
+   cores do estilo e grava as regras liberadas de `styles/allowances.json`; `inspect.mjs` e `lint.mjs` as
+   respeitam. Todas as outras regras do motor continuam valendo.
+5. Projeto shadcn/Tailwind: `ui-components` gera o tema (`style-to-shadcn.mjs <slug>`) com contraste medido.
 
 > Nunca "faça uma média" entre dois estilos. Se o pedido mistura (ex.: "brutalista mas premium"), escolha o
 > dono da superfície e tome emprestado no máximo um *detalhe* do outro, declarando-o como desvio.
@@ -102,8 +118,13 @@ um exemplo "não faça" e, para padrão novo, uma nota de migração.
 - `claude` e `codex` são **nomes de estilos**, não seleção de modelo. `impeccable` é o estilo Bergside, não o
   projeto homônimo. `stitch` é um estilo corporativo de dados; **não** é `stitch-design-taste`
   (gerador de DESIGN.md, em `design-engine-legacy`). `minimal` ≠ `minimalist-ui`.
-- Fontes proprietárias (ex.: "Anthropic Sans", SF Pro) não estão disponíveis ao projeto; use fallback gratuito
-  (Inter/Geist) e registre.
+- Fontes proprietárias (ex.: "Anthropic Sans", SF Pro) não estão disponíveis ao projeto; troque por uma gratuita
+  **da mesma classe** (Fontshare, Google Fonts ou a biblioteca de tipos do motor) e registre. Inter não é o
+  fallback padrão: ela já é a fonte de 11 estilos e é um dos motivos de os resultados se parecerem.
+- Os arquivos `styles/<slug>.md` são curtos (tokens essenciais + fontes). As regras "Fazer/Evitar" repetidas
+  neles são genéricas; a direção real vem do motor e do brief.
+- No Windows, `styles/claude.md` é lido pelo Claude Code como um `CLAUDE.md` da pasta (o sistema de arquivos não
+  diferencia maiúsculas). É só o texto do estilo, não uma instrução.
 - `matrix` é dark-only. `flat`/`material`/`skeumorphism` são variantes Antigravity do mesmo repositório.
 - Não instale bibliotecas homônimas (Ant Design, Material UI…) só porque o estilo cita o nome: o estilo é uma
   linguagem visual, não uma dependência.

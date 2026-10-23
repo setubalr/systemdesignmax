@@ -43,5 +43,6 @@ primário colorido clareado até 4.5:1). É um **ponto de partida** — valide v
 
 ## Fontes
 
-O script lista fontes fora de uma allowlist de fontes livres (ex.: "Anthropic Sans" não é instalável). Use
-Inter/Geist como fallback gratuito e registre a decisão.
+O script lista fontes fora de uma allowlist de fontes livres (ex.: "Anthropic Sans" não é instalável). Troque por
+uma fonte gratuita **da mesma classe** (serifa por serifa, grotesca por grotesca), de Fontshare, Google Fonts ou da
+biblioteca de tipos do motor, e registre a decisão. Não use Inter/Geist como fallback automático.

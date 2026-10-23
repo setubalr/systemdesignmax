@@ -75,6 +75,10 @@ Do these in order. Steps 1–5 take a few minutes and decide whether the page is
 
 ### 1. Read the brief and the project
 
+If `.taste-skill/DESIGN-BRIEF.md` exists (the systemdesignmax orchestrator writes it before any design), read it
+first and whole: its product, audience, feeling, category territory, inventory, axes and chosen concept are this
+step and the starting point of step 4. Add to it what you learn; do not redo it.
+
 Find out what is real: the subject, the audience, the one thing the page must get someone to do, the
 stack, any existing brand (colours, fonts, logo), and above all **what imagery truly exists**: the
 project's own photographs or product shots, a real interface that can be shown, an image generation
@@ -135,6 +139,11 @@ node <skill>/scripts/draw.mjs <the same arguments, without --options> --directio
   find in the open collections are not the project's own; leave them out of `--have`.
 - `--keep palette,type`: when the brand already fixes colours or typefaces. The draw then deals only
   the composition, and you map the brand's values onto the roles.
+- `--style <slug>` (optional): flavour the direction with a visual style from the sibling `design-styles`
+  skill (glassmorphism, neon, claymorphism, brutalism, pixel styles…) when the brief asks for a visual
+  language this library does not deal. The composition stays dealt; type and colour come from the style
+  (it implies `--keep palette,type`), and the house rules that style needs (listed in
+  `design-styles/styles/allowances.json`) are allowed for this build. The sheet prints both.
 
 The command prints a **direction sheet**. It is the art direction for this build:
 
@@ -373,7 +382,9 @@ Do not claim a check you did not run.
 
 ## House rules
 
-These hold on every build, whatever the direction. `inspect.mjs` measures them.
+These hold on every build, whatever the direction. `inspect.mjs` measures them. The one exception is a rule
+the sheet allows: a direction, a style dealt with `--style`, or `--allow` for a brand asset. `inspect.mjs` and
+`lint.mjs` read the sheet's `allow` list and skip only those rules; every other rule still holds.
 
 | Rule | Instead |
 | --- | --- |
