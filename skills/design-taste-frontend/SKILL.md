@@ -358,7 +358,7 @@ under sixteen). Any scroll scenes are already built (step 6); around them the la
 Transform and opacity only; every move has a `prefers-reduced-motion` fallback that keeps the content
 and drops the travel. A move that changes the colour or the layout of whole screens (colour by
 chapter, a pinned story) is part of the composition, so build it in step 6 and let every look round see
-it. `references/motion.md` has the tokens and tested recipes. Then run the inspector once more and check
+it. `references/motion.md` has the tokens and tested recipes; `references/motion-stack.md` says which library carries each effect, what its licence allows and how it is wired into the framework. Then run the inspector once more and check
 every screenshot for content that failed to appear.
 
 ### 10. Report
@@ -526,6 +526,7 @@ open collections could not be searched.
 | `references/layout.md` | Grid, margins, rhythm, section variety, navigation, footer, the phone composition. |
 | `references/imagery.md` | Choosing, finding, crediting, cropping and treating pictures; what to do with none. |
 | `references/motion.md` | Step 9. Budget, tokens, recipes, reduced motion. |
+| `references/motion-stack.md` | Step 9, when choosing a motion library, checking its licence, installing it or wiring it into React, Vue, Svelte or Astro. |
 | `references/scenes.md` | Step 6, when the sheet deals scroll scenes: putting one on a page, filling, fitting, the phone, checking, the catalogue. |
 | `references/critique.md` | Step 8. How to look, how to score, what to fix first. |
 | `references/tells.md` | The dated registry of generated-page tells and what each is replaced by. |

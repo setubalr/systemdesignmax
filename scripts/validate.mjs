@@ -130,6 +130,13 @@ for (const [s, rules] of Object.entries(allowances)) {
 const drawStyle = spawnSync(process.execPath, [path.join(skillsDir, "design-taste-frontend/scripts/draw.mjs"), "--sector", "saas", "--brief", "validate", "--options", "2", "--style", "glassmorphism"], { encoding: "utf8", env: { ...process.env, TASTE_SKILL_HISTORY: path.join(os.tmpdir(), "sdm-validate-history.json") } });
 ok(drawStyle.status === 0, `draw.mjs --style falhou: ${(drawStyle.stderr || "").slice(0, 160)}`);
 
+// ---------- pilha de movimento: versões fixas, iguais às do stage.js, e linkada pela skill ----------
+const motionStack = read(path.join(skillsDir, "design-taste-frontend/references/motion-stack.md"));
+const stageSrc = read(path.join(skillsDir, "design-taste-frontend/assets/scenes/stage.js"));
+ok(!/[\w.-]@(latest|[\^~]|\d+(?!\.\d))/.test(motionStack), "motion-stack.md: pacote sem pin exato (pacote@latest, ^, ~ ou só o major)");
+for (const pin of ["gsap@3.15.0", "lenis@1.3.26"]) ok(motionStack.includes(pin) && stageSrc.includes(pin), `motion-stack.md e stage.js devem fixar ${pin}`);
+ok(read(path.join(skillsDir, "design-taste-frontend/SKILL.md")).includes("references/motion-stack.md"), "design-taste-frontend/SKILL.md deve listar references/motion-stack.md");
+
 // ---------- agente em sincronia com o prompt ----------
 const sync = spawnSync(process.execPath, [path.join(root, "scripts/sync-prompt.mjs"), "--check"], { encoding: "utf8" });
 ok(sync.status === 0, "agents/systemdesignmax.md desatualizado em relação a prompts/system-prompt.md");

@@ -3,6 +3,9 @@
 Read this before adding any animation. The static page must already be finished and passing
 `inspect.mjs`; motion is the last pass, never a way to rescue a weak layout.
 
+Which library carries each effect, what its licence allows and how it is wired into a framework is in
+`motion-stack.md`. This file keeps the budget, the tokens and the recipes.
+
 ## Contents
 
 1. The budget
