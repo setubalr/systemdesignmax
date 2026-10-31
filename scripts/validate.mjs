@@ -42,7 +42,7 @@ function frontmatter(file) {
 // ---------- skills ----------
 const skillsDir = path.join(root, "skills");
 const skillNames = fs.readdirSync(skillsDir).filter((d) => fs.existsSync(path.join(skillsDir, d, "SKILL.md")));
-const expectedSkills = ["systemdesignmax", "design-taste-frontend", "design-engine-legacy", "design-styles", "image-direction", "design-qa", "ui-components"];
+const expectedSkills = ["setubal-design", "design-taste-frontend", "design-engine-legacy", "design-styles", "image-direction", "design-qa", "ui-components"];
 ok(expectedSkills.every((s) => skillNames.includes(s)) && skillNames.length === expectedSkills.length, `skills esperadas ${expectedSkills.join(", ")}; achadas ${skillNames.join(", ")}`);
 const seen = new Set();
 for (const name of skillNames) {
@@ -66,7 +66,7 @@ const legacy = frontmatter(path.join(skillsDir, "design-engine-legacy/SKILL.md")
 ok(legacy?.["disable-model-invocation"] === "true", "design-engine-legacy deve ter disable-model-invocation: true");
 
 // ---------- registro das 82 ----------
-const deps = JSON.parse(read(path.join(skillsDir, "systemdesignmax/references/dependencies.json")));
+const deps = JSON.parse(read(path.join(skillsDir, "setubal-design/references/dependencies.json")));
 const entries = Object.entries(deps.skills);
 ok(entries.length === 82 && deps.total === 82, `dependencies.json deve ter 82 entradas (tem ${entries.length})`);
 for (const [slug, e] of entries) {
@@ -111,16 +111,29 @@ ok(spell.items.every((i) => i.install.startsWith("npx shadcn@latest add @spell/"
 const plugin = JSON.parse(read(path.join(root, ".claude-plugin/plugin.json")));
 const market = JSON.parse(read(path.join(root, ".claude-plugin/marketplace.json")));
 const mcp = JSON.parse(read(path.join(root, ".mcp.json")));
-ok(plugin.name === "systemdesignmax" && market.plugins[0].name === plugin.name, "nomes do plugin/marketplace divergem");
+ok(plugin.name === "setubal-design" && market.plugins[0].name === plugin.name, "nomes do plugin/marketplace divergem");
 ok(plugin.version === market.plugins[0].version, "versão do plugin e do marketplace divergem");
 const shadcnMcp = mcp.mcpServers?.shadcn;
 ok(shadcnMcp?.command === "node" && shadcnMcp.args?.[0] === "${CLAUDE_PLUGIN_ROOT}/scripts/mcp-shadcn.mjs", ".mcp.json: o shadcn deve iniciar por node ${CLAUDE_PLUGIN_ROOT}/scripts/mcp-shadcn.mjs (npx direto falha no Windows)");
 ok(fs.existsSync(path.join(root, "scripts/mcp-shadcn.mjs")), "scripts/mcp-shadcn.mjs ausente");
 
 // ---------- descoberta e hierarquia motor × estilo ----------
-const orchestrator = read(path.join(skillsDir, "systemdesignmax/SKILL.md"));
-ok(orchestrator.includes("references/descoberta.md") && fs.existsSync(path.join(skillsDir, "systemdesignmax/references/descoberta.md")), "a orquestradora deve apontar para references/descoberta.md");
+const orchestrator = read(path.join(skillsDir, "setubal-design/SKILL.md"));
+ok(orchestrator.includes("references/descoberta.md") && fs.existsSync(path.join(skillsDir, "setubal-design/references/descoberta.md")), "a orquestradora deve apontar para references/descoberta.md");
 ok(orchestrator.includes("DESIGN-BRIEF.md"), "a orquestradora deve exigir o DESIGN-BRIEF.md");
+
+// ---------- skill mãe: varredura obrigatória e todas as skills chamadas ----------
+for (const ref of ["varredura.md", "hig-web.md", "workflow.md", "conflitos.md", "relatorio.md"]) {
+  ok(orchestrator.includes(`references/${ref}`) && fs.existsSync(path.join(skillsDir, "setubal-design/references", ref)), `a skill mãe deve apontar para references/${ref}`);
+}
+ok(orchestrator.includes("VARREDURA.md"), "a skill mãe deve exigir o VARREDURA.md");
+for (const s of expectedSkills) ok(orchestrator.includes("`" + s + "`"), `a skill mãe não chama a skill \`${s}\``);
+const varredura = read(path.join(skillsDir, "setubal-design/references/varredura.md"));
+const catalogIds = [...varredura.split("\n## E.")[0].matchAll(/^\| ([A-Z]\d+) \|/gm)].map((m) => m[1]); // só o catálogo, sem o modelo do arquivo
+ok(new Set(catalogIds).size === catalogIds.length && catalogIds.length >= 40, `varredura.md: catálogo com IDs repetidos ou curto (${catalogIds.length})`);
+for (const p of ["F", "T", "S", "E", "I", "N", "X", "D"]) ok(catalogIds.some((id) => id.startsWith(p)), `varredura.md: bloco ${p} ausente do catálogo`);
+ok(read(path.join(skillsDir, "design-taste-frontend/SKILL.md")).includes("VARREDURA.md"), "o motor deve ler o VARREDURA.md");
+ok(!/systemdesignmax/i.test(read(path.join(root, "commands/design.md")) + read(path.join(root, "prompts/system-prompt.md")) + orchestrator), "nome antigo systemdesignmax ainda aparece no comando, no prompt ou na skill mãe");
 const allowances = JSON.parse(read(path.join(stylesDir, "allowances.json"))).styles;
 const rulesSrc = read(path.join(skillsDir, "design-taste-frontend/scripts/lib/rules.mjs")) + read(path.join(skillsDir, "design-taste-frontend/scripts/lint.mjs"));
 for (const [s, rules] of Object.entries(allowances)) {
@@ -139,7 +152,7 @@ ok(read(path.join(skillsDir, "design-taste-frontend/SKILL.md")).includes("refere
 
 // ---------- agente em sincronia com o prompt ----------
 const sync = spawnSync(process.execPath, [path.join(root, "scripts/sync-prompt.mjs"), "--check"], { encoding: "utf8" });
-ok(sync.status === 0, "agents/systemdesignmax.md desatualizado em relação a prompts/system-prompt.md");
+ok(sync.status === 0, "agents/setubal-design.md desatualizado em relação a prompts/system-prompt.md");
 ok(fs.existsSync(path.join(root, "commands/design.md")), "commands/design.md ausente");
 
 // ---------- higiene: nada de segredo ----------

@@ -75,9 +75,14 @@ Do these in order. Steps 1–5 take a few minutes and decide whether the page is
 
 ### 1. Read the brief and the project
 
-If `.taste-skill/DESIGN-BRIEF.md` exists (the systemdesignmax orchestrator writes it before any design), read it
+If `.taste-skill/DESIGN-BRIEF.md` exists (the setubal-design orchestrator writes it before any design), read it
 first and whole: its product, audience, feeling, category territory, inventory, axes and chosen concept are this
 step and the starting point of step 4. Add to it what you learn; do not redo it.
+
+If `.taste-skill/VARREDURA.md` exists too, read it next. It holds the diagnosis, the intervention level and a
+decision for every strategy in the orchestrator's catalogue (which motion recipes, scenes, components and effects
+this project uses, where, and in which layer: CSS first, then React, then animation JavaScript). Build what it
+marks `aplicar` or `adaptar`, never what it marks `descartar`, and mark each row done as you build it.
 
 Find out what is real: the subject, the audience, the one thing the page must get someone to do, the
 stack, any existing brand (colours, fonts, logo), and above all **what imagery truly exists**: the

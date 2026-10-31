@@ -37,7 +37,7 @@ else add("WARN", "playwright-cli", "não instalado (validação de jornadas do d
 
 if (process.argv.includes("--json")) console.log(JSON.stringify({ root, platform: process.platform, checks }, null, 1));
 else {
-  console.log(`systemdesignmax · doctor  (${process.platform}, ${root})\n`);
+  console.log(`setubal-design · doctor  (${process.platform}, ${root})\n`);
   for (const c of checks) {
     console.log(`${c.level.padEnd(4)}  ${c.item}: ${c.detail}`);
     if (c.fix && c.level !== "OK") console.log(`      → ${c.fix}`);

@@ -7,7 +7,7 @@ de chamada de cada uma e diz onde ela vive agora. Máquina: `dependencies.json`.
 
 | Skill do plugin | Absorveu | Papel |
 |---|---|---|
-| `systemdesignmax` | — | orquestrador: fluxo, seleção, conflitos, evidências |
+| `setubal-design` | — | orquestrador: fluxo, seleção, conflitos, evidências |
 | `design-taste-frontend` | 2 (motor + alias) | motor de direção e construção |
 | `design-engine-legacy` | 4 | motores/adaptadores legados (opt-in) |
 | `design-styles` | 70 | 67 estilos Bergside + 3 clássicos opt-in |

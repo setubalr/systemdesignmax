@@ -32,7 +32,7 @@ const LIB = join(HERE, '..', 'library');
 const ASSETS_PATH = join(HERE, 'assets.mjs').split('\\').join('/');
 const ASSETS_CMD = `node ${/\s/.test(ASSETS_PATH) ? `"${ASSETS_PATH}"` : ASSETS_PATH}`;
 const load = (name) => JSON.parse(readFileSync(join(LIB, name + '.json'), 'utf8'));
-// A visual style from the sibling design-styles skill (systemdesignmax plugin) can flavour the sheet: its type and
+// A visual style from the sibling design-styles skill (setubal-design plugin) can flavour the sheet: its type and
 // colours replace the dealt ones, and the house rules its language needs are allowed. Composition stays dealt.
 const STYLES = join(HERE, '..', '..', 'design-styles', 'styles');
 function loadStyle(slug) {

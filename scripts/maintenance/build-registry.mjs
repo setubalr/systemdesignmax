@@ -2,7 +2,7 @@
 // Gera a parte "dados" do merge a partir das fontes originais:
 //   - skills/design-styles/styles/<slug>.md   (um arquivo enxuto por estilo)
 //   - skills/design-styles/styles/index.json  (índice consultável)
-//   - skills/systemdesignmax/references/dependencies.json (as 82 skills originais -> onde vivem agora)
+//   - skills/setubal-design/references/dependencies.json (as 82 skills originais -> onde vivem agora)
 //
 // Uso:
 //   node scripts/maintenance/build-registry.mjs --bergside <awesome-design-skills/skills> \
@@ -216,7 +216,7 @@ for (const [slug, c] of Object.entries(catalog)) {
 const total = Object.keys(registry).length;
 if (total !== 82) throw new Error(`esperava 82 entradas, achei ${total}`);
 write(
-  path.join(root, "skills/systemdesignmax/references/dependencies.json"),
+  path.join(root, "skills/setubal-design/references/dependencies.json"),
   JSON.stringify({ total, note: "Mapa das 82 skills originais para o local onde vivem após o merge.", skills: registry }, null, 2) + "\n",
 );
 console.log(`ok: ${Object.keys(index).length} estilos, ${total} entradas no registro`);
@@ -243,7 +243,7 @@ const L = ["<!-- GERADO por scripts/maintenance/build-registry.mjs a partir de d
   "As 82 dependências originais foram reunidas por função. Este catálogo preserva o nome, a função e as condições",
   "de chamada de cada uma e diz onde ela vive agora. Máquina: `dependencies.json`.", "",
   "| Skill do plugin | Absorveu | Papel |", "|---|---|---|",
-  "| `systemdesignmax` | — | orquestrador: fluxo, seleção, conflitos, evidências |",
+  "| `setubal-design` | — | orquestrador: fluxo, seleção, conflitos, evidências |",
   "| `design-taste-frontend` | 2 (motor + alias) | motor de direção e construção |",
   "| `design-engine-legacy` | 4 | motores/adaptadores legados (opt-in) |",
   "| `design-styles` | 70 | 67 estilos Bergside + 3 clássicos opt-in |",
@@ -256,5 +256,5 @@ for (const [slug, m] of Object.entries(index)) if (!fixed.has(slug)) (byFamily[m
 L.push("## F. Estilos universais — skill `design-styles` (um estilo por superfície, nunca misturar)", "",
   `${Object.values(byFamily).flat().length} estilos Bergside/typeui.sh (inclui as variantes Antigravity \`flat\`, \`material\`, \`skeumorphism\`). Leia só o arquivo do escolhido.`, "");
 for (const [fam, list] of Object.entries(byFamily).sort()) L.push(`### ${fam}`, "", HEAD, ...list.sort().map(row), "");
-write(path.join(root, "skills/systemdesignmax/references/catalogo.md"), L.join("\n"));
+write(path.join(root, "skills/setubal-design/references/catalogo.md"), L.join("\n"));
 console.log("ok: catalogo.md");

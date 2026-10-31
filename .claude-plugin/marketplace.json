@@ -1,19 +1,19 @@
 {
-  "name": "systemdesignmax",
+  "name": "setubal-design",
   "owner": { "name": "setubalr", "url": "https://github.com/setubalr" },
   "metadata": {
-    "description": "Marketplace do plugin systemdesignmax: redesign e design de sistemas com skills unificadas.",
-    "version": "1.1.0"
+    "description": "Marketplace do Setúbal Design: redesign e design de sistemas com uma skill mãe que puxa todas as outras.",
+    "version": "2.0.0"
   },
   "plugins": [
     {
-      "name": "systemdesignmax",
+      "name": "setubal-design",
       "source": "./",
-      "description": "Orquestradora de redesign: motor de direção, 70 estilos com tokens, shadcn/ui e Spell UI gratuitos, imagem e QA em browser real. Comando /systemdesignmax:design.",
-      "version": "1.1.0",
+      "description": "Skill mãe de redesign: diagnóstico, varredura de todas as estratégias de UI premium e Apple HIG, motor de direção, 70 estilos, shadcn/ui e Spell UI gratuitos, imagem e QA em browser real. Comando /setubal-design:design.",
+      "version": "2.0.0",
       "license": "MIT",
       "category": "design",
-      "keywords": ["design", "redesign", "shadcn", "ui", "accessibility"],
+      "keywords": ["design", "redesign", "motion", "shadcn", "react", "ui", "accessibility"],
       "homepage": "https://github.com/setubalr/systemdesignmax"
     }
   ]

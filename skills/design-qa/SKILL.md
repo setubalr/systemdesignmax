@@ -10,11 +10,15 @@ Reúne `web-design-guidelines` (auditoria estática) e `playwright-cli` (browser
 
 ## Ordem
 
+A skill mãe (`setubal-design`) chama esta skill duas vezes: na etapa 1, para registrar o **antes** (os achados viram
+as linhas T1 a T4 da varredura), e na etapa 6, para provar o **depois** com as mesmas medidas.
+
 1. **Gates do projeto** (o que existir): build, lint, typecheck, testes. Registre comando e resultado. Se não existir,
    escreva "não existe" — não invente sucesso.
 2. **Auditoria estática** — `references/web-design-guidelines.md`. Busque as regras atuais na URL-fonte antes de cada
    revisão (WebFetch), leia os arquivos-alvo e reporte em `arquivo:linha`, terso. Auditoria estática **não** prova
-   acessibilidade assistiva real.
+   acessibilidade assistiva real. Some o checklist web da Apple HIG (`setubal-design/references/hig-web.md` §2): item
+   crítico bloqueia a entrega.
 3. **Validação em browser** — `references/playwright-cli.md` (+ `references/playwright-cli/*.md`).
    - Obtenha referências de elementos por snapshot e **renove-as após cada mudança de DOM**.
    - Captura em **desktop (≥1280), tablet (~768) e mobile (~375)**, e nos temas existentes (claro/escuro).

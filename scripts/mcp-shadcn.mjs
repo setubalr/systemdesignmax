@@ -12,7 +12,7 @@ const child = win
   : spawn("npx", ["-y", "shadcn@latest", "mcp"], { stdio: "inherit" });
 
 child.on("error", (err) => {
-  console.error(`systemdesignmax: não foi possível iniciar o MCP do shadcn (${err.code || err.message}). Confira se Node e npx estão no PATH: node scripts/doctor.mjs`);
+  console.error(`setubal-design: não foi possível iniciar o MCP do shadcn (${err.code || err.message}). Confira se Node e npx estão no PATH: node scripts/doctor.mjs`);
   process.exit(1);
 });
 child.on("exit", (code, signal) => process.exit(signal ? 1 : code ?? 0));

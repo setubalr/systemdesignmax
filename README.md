@@ -1,23 +1,25 @@
-# systemdesignmax
+# Setúbal Design
 
-Plugin do Claude Code para **redesenhar e projetar sistemas** com método: ele diagnostica o projeto, escolhe **um**
-motor de direção e **um** estilo por superfície, usa componentes **gratuitos** (shadcn/ui e Spell UI), implementa,
-audita e valida em browser real — e só reporta o que foi comprovado.
+Plugin do Claude Code para **redesenhar e projetar sistemas** com acabamento de projeto de alto orçamento. Você chama
+**uma** skill, a skill mãe `setubal-design`, e ela puxa todas as outras numa sequência fixa: entende o produto, dá nota
+ao site atual, **varre uma a uma todas as estratégias de UI premium** (e os princípios da Apple HIG para web)
+decidindo se cada uma cabe e onde, escolhe a direção, implementa com **CSS primeiro e React**, audita e valida em
+browser real — e só reporta o que foi comprovado.
 
-As **82 skills** de design que existiam soltas foram **unificadas por função** em 6 especialistas, coordenados por uma
-orquestradora, um agente (system prompt) e um comando único.
+As **82 skills** de design que existiam soltas foram **unificadas por função** em 6 especialistas, coordenados pela
+skill mãe, um agente (system prompt) e um comando único.
 
 ```
-/systemdesignmax:design redesenhar o painel de chamadas, mantendo a marca --style shadcn
+/setubal-design:design redesenhar o painel de chamadas, mantendo a marca --style shadcn
 ```
 
 ## O que vem no plugin
 
 | Componente | Nome | O que faz |
 |---|---|---|
-| Comando | `/systemdesignmax:design` | entrada única; aceita `--audit`, `--auto`, `--style`, `--engine`, `--images`, `--publish` |
-| Agente | `systemdesignmax` | system prompt completo (`prompts/system-prompt.md` é a fonte) |
-| Skill | `systemdesignmax` | **orquestradora**: fluxo 0–6, descoberta do produto (`DESIGN-BRIEF`), três conceitos, conflitos |
+| Comando | `/setubal-design:design` | entrada única; aceita `--audit`, `--auto`, `--style`, `--engine`, `--images`, `--publish` |
+| Agente | `setubal-design` | system prompt completo (`prompts/system-prompt.md` é a fonte) |
+| Skill | `setubal-design` | **skill mãe**: fluxo 0–7, descoberta (`DESIGN-BRIEF`), diagnóstico 0–5, varredura de todas as estratégias (`VARREDURA`), Apple HIG para web, três conceitos, conflitos |
 | Skill | `design-taste-frontend` | **motor** de direção e construção (inclui o antigo `redesign-existing-projects`) |
 | Skill | `design-styles` | **70 estilos** com tokens + matriz por tipo de produto |
 | Skill | `ui-components` | **shadcn/ui + Spell UI** gratuitos; converte estilo → tema; contraste WCAG |
@@ -37,8 +39,8 @@ orquestradora, um agente (system prompt) e um comando único.
 | `web-design-guidelines` + `playwright-cli` | `design-qa` | Duas lentes da mesma etapa: auditoria estática + prova em browser. |
 | — | `ui-components` | **Novo**: a ponte com shadcn/ui e Spell UI. |
 
-Onde cada original vive agora: [`dependencies.json`](skills/systemdesignmax/references/dependencies.json) (máquina) e
-[`catalogo.md`](skills/systemdesignmax/references/catalogo.md) (legível, com função e condições de chamada).
+Onde cada original vive agora: [`dependencies.json`](skills/setubal-design/references/dependencies.json) (máquina) e
+[`catalogo.md`](skills/setubal-design/references/catalogo.md) (legível, com função e condições de chamada).
 Os textos originais do catálogo e da instrução de sistema estão em [`docs/source/`](docs/source).
 
 ## shadcn/ui e Spell UI — gratuitos e conectados
@@ -69,7 +71,7 @@ No Claude Code:
 
 ```text
 /plugin marketplace add setubalr/systemdesignmax
-/plugin install systemdesignmax@systemdesignmax
+/plugin install setubal-design@setubal-design
 ```
 
 Requisitos:
@@ -93,21 +95,28 @@ Outros agentes (Codex, Cursor…): copie a pasta `skills/` para o mecanismo de s
 
 ## Como o agente decide (resumo)
 
-1. **Proteger → Entender (projeto + produto) → Conceituar → Dirigir → Construir → Verificar → Entregar.**
+1. **Proteger → Entender (projeto + produto + diagnóstico) → Varrer → Conceituar → Dirigir → Construir →
+   Verificar → Entregar.** Cada etapa chama skills definidas; `design-styles`, `ui-components` e `image-direction`
+   são sempre consultadas, mesmo quando a decisão é não usar nada delas.
 2. **Descoberta antes do design:** público, ação principal, sentimento-alvo, concorrentes reais, o que só o produto
    tem e eixos de personalidade viram `.taste-skill/DESIGN-BRIEF.md`. Nenhum estilo é escolhido antes disso.
-3. **Três conceitos** que diferem em pelo menos três eixos; o usuário escolhe (ou `--auto`).
-4. **O motor é o dono da direção** (ideia, composição, imagem, movimento). Um estilo é um sabor opcional:
+3. **Diagnóstico e varredura:** o site atual leva nota 0–5 em fundação, técnica, movimento, narrativa e mídia, e
+   cada uma das ~50 estratégias do catálogo (tipografia fluida, tokens, reveals, cenas de scroll, View Transitions,
+   3D, checklist da Apple HIG…) recebe existe? cabe? onde? camada? decisão, em `.taste-skill/VARREDURA.md`.
+4. **CSS primeiro, React em seguida, JavaScript de animação por último.** No máximo dois momentos protagonistas
+   por página.
+5. **Três conceitos** que diferem em pelo menos três eixos; o usuário escolhe (ou `--auto`).
+6. **O motor é o dono da direção** (ideia, composição, imagem, movimento). Um estilo é um sabor opcional:
    `draw.mjs --style <slug>` traz tipografia, paleta e as regras que o estilo libera (`styles/allowances.json`),
    sem trocar a composição.
-5. Precedência: segurança → escopo do usuário → funcionalidade e acessibilidade → marca obrigatória → conceito escolhido → dependências.
-6. Nunca afirma ter rodado/gerado/publicado sem a ação real; separa **implementado** de **comprovado**.
+7. Precedência: segurança → escopo do usuário → funcionalidade e acessibilidade → marca obrigatória → conceito escolhido → dependências.
+8. Nunca afirma ter rodado/gerado/publicado sem a ação real; separa **implementado** de **comprovado**.
 
 ## Manutenção
 
 ```bash
-node scripts/validate.mjs        # 780+ verificações: frontmatter, links, 82 mapeadas, 67 estilos × contraste, manifestos
-node scripts/sync-prompt.mjs     # regenera agents/systemdesignmax.md a partir de prompts/system-prompt.md
+node scripts/validate.mjs        # 900+ verificações: frontmatter, links, 82 mapeadas, estilos × contraste, skill mãe e varredura, manifestos
+node scripts/sync-prompt.mjs     # regenera agents/setubal-design.md a partir de prompts/system-prompt.md
 node scripts/doctor.mjs          # confere Node, npx, navegador e playwright-cli
 
 # regenerar dados a partir das fontes (clonadas à parte)

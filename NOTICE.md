@@ -14,6 +14,8 @@ upstream de cada arquivo permanece sob a licença de origem.
 | [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | Apache-2.0 | `skills/design-qa/references/playwright-cli*` | frontmatter removido |
 | [xxtomm/spell-ui](https://github.com/xxtomm/spell-ui) (spell.sh) | MIT | `skills/ui-components/references/spell-ui-catalog.json` (metadados), `LICENSES/spell-ui.MIT` | apenas metadados do `registry.json`; o código dos componentes **não** é copiado, é instalado do registry pelo usuário |
 | [shadcn/ui](https://ui.shadcn.com) | MIT | referenciado (CLI/MCP/registry); nenhum código copiado | — |
+| [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) | © Apple Inc. | `skills/setubal-design/references/hig-web.md` | princípios resumidos com palavras próprias e URLs canônicas; nenhum texto da HIG copiado |
+| [raintree-technology/apple-hig-skills](https://github.com/raintree-technology/apple-hig-skills) (HIG Doctor) | MIT | `skills/setubal-design/references/hig-web.md` §2 | checklist web derivado das regras do auditor, reescrito; a CLI é citada, não incluída |
 
 Os arquivos em `docs/source/` são os documentos originais fornecidos pelo autor deste repositório (catálogo de 82 skills
 e instrução de sistema), preservados para rastreabilidade do merge.
